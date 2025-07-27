@@ -1,0 +1,181 @@
+/*=============== GOOGLE FONTS (TECH STYLE) ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /* PRIMARY COLORS: CYBER / TECH */
+  --first-color: #38bdf8; /* cyan-blue */
+  --first-color-alt: #0ea5e9;
+  --first-color-light: #7dd3fc;
+  --first-color-lighten: #e0f2fe;
+
+  --second-color: #facc15; /* accent: yellow-gold */
+
+  --title-color: #f8fafc;
+  --text-color: #cbd5e1;
+  --text-color-light: #64748b;
+
+  --border-color: #334155;
+  --body-color: #0f172a;
+  --container-color1: #1e293b;
+  --container-color2: #334155;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'JetBrains Mono', monospace;
+  --heading-font: 'Space Grotesk', sans-serif;
+  --heading-font2: 'Space Grotesk', sans-serif;
+
+  --biggest-font-size: 2.5rem;
+  --h1-font-size: 1.8rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .875rem;
+  --smaller-font-size: .75rem;
+
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 2rem;
+    --h3-font-size: 1.5rem;
+    --normal-font-size: 1.125rem;
+    --small-font-size: 1rem;
+    --smaller-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  width: 100%;
+  overflow-x: hidden;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-family: var(--heading-font2);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  transition: .3s;
+  color: var(--first-color);
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--text-color);
+  transition: width 0.3s ease;
+}
+
+a.logo-link::after,
+.nav__flags a::after,
+.contact-knop::after,
+.homepage__card-button::after {
+  display: none !important;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button {
+  font-family: var(--body-font);
+  outline: none;
+  border: none;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1600px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 1rem;
+}
+
+.section__title span {
+  color: var(--second-color);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--second-color);
+}
+
+.main {
+  overflow: hidden;
+}
+
+/*=============== RESPONSIVE IMAGE DISPLAY ===============*/
+.responsive-img {
+  width: 80%;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .responsive-img {
+    width: 60%;
+    max-width: 300px;
+  }
+}
