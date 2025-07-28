@@ -325,7 +325,7 @@ body.light-theme .footer__legal-disclaimer {
 /*=============== SKILLS LIST ===============*/
 .skills-list {
   margin: 1.5rem auto 2.5rem;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
   text-align: left;
   max-width: 650px;
   font-weight: var(--font-medium);
@@ -335,34 +335,14 @@ body.light-theme .footer__legal-disclaimer {
 
 .skills-list li {
   margin-bottom: 0.75rem;
-  padding-left: 0.5rem;
+  list-style: disc;
   position: relative;
+  padding-left: 0.25rem;
 }
 
-.skills-list li::before {
-  content: "•";
-  color: var(--first-color);
-  font-size: 1.2em;
-  position: absolute;
-  left: -1rem;
-  top: 0;
-}
-
-/* Inline domain label */
-.skills-list .skill-domain {
-  font-size: 0.875em;
-  color: var(--text-color-light);
-  font-style: italic;
-  margin-left: 0.35rem;
-}
-
-/* Light theme overrides */
+/* Light mode override */
 body.light-theme .skills-list {
   color: #0f172a;
-}
-
-body.light-theme .skills-list .skill-domain {
-  color: #64748b;
 }
 
 /*=============== FOOTER ===============*/
