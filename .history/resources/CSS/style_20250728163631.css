@@ -74,14 +74,6 @@ h3 {
   font-family: var(--heading-font2);
 }
 
-ul {
-  list-style: disc;
-}
-ul.nav,
-ul.footer-menu {
-  list-style: none;
-}
-
 a {
   position: relative;
   text-decoration: none;
@@ -328,26 +320,28 @@ body.light-theme .footer__legal-disclaimer {
 
 /*=============== SKILLS LIST ===============*/
 .skills-list {
-  list-style: none; 
-  padding-left: 0;  
+  margin: 1.5rem auto 2.5rem;
+  padding-left: 1rem;
+  text-align: left;
+  max-width: 650px;
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+  line-height: 1.7;
 }
 
 .skills-list li {
-  position: relative;
-  padding-left: 1.5rem;
   margin-bottom: 0.75rem;
-  text-align: left;
+  padding-left: 0.5rem;
+  position: relative;
 }
 
 .skills-list li::before {
-  content: '';
+  content: "•";
+  color: var(--first-color);
+  font-size: 1.2em;
   position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 0.5em;
-  height: 0.5em;
-  background-color: var(--first-color-alt);
-  border-radius: 50%; 
+  left: -1rem;
+  top: 0;
 }
 
 /* Inline domain label */
