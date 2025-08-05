@@ -278,15 +278,9 @@ body.light-theme {
 }
 
 body.light-theme .header {
-  background: linear-gradient(
-    90deg,
-    #f1f5f9 0%,
-    #e0f2fe 50%,
-    #cbd5e1 100%
-  );
-  border-bottom: 1px solid #cbd5e1;
+  background-color: #e2e8f0;
+  border-bottom-color: #cbd5e1;
 }
-
 
 body.light-theme .footer {
   background-color: #e2e8f0;
@@ -358,8 +352,6 @@ body.light-theme .footer__legal-disclaimer {
 .skills-list {
   list-style: none; 
   padding-left: 0;  
-  margin-top: 3em;
-  margin-bottom: 3em;
 }
 
 .skills-list li {

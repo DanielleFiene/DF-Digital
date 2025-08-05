@@ -245,18 +245,6 @@ body:not(.light-theme) .logo img {
   transition: all 0.3s ease;
 }
 
-/* =============== DARK THEME HEADER STYLE =============== */
-body:not(.light-theme) .header {
-  background: linear-gradient(
-    90deg,
-    #0c111c 0%,
-    #121a25 50%,
-    #1a2433 100%
-  );
-  border-bottom: 1px solid #1f2a38;
-}
-
-
 /*=============== LIGHT THEME LOGO STYLING ===============*/
 body.light-theme .logo img {
   border: 2px solid #94a3b8;
@@ -271,22 +259,16 @@ body.light-theme {
   background: linear-gradient(
     135deg,
     #f8fafc 0%,
-    #e5e7eb 40%,
-    #cbd5e1 100%
+    #e2e8f0 100%
   );
   color: #0f172a;
 }
 
-body.light-theme .header {
-  background: linear-gradient(
-    90deg,
-    #f1f5f9 0%,
-    #e0f2fe 50%,
-    #cbd5e1 100%
-  );
-  border-bottom: 1px solid #cbd5e1;
-}
 
+body.light-theme .header {
+  background-color: #e2e8f0;
+  border-bottom-color: #cbd5e1;
+}
 
 body.light-theme .footer {
   background-color: #e2e8f0;
@@ -358,8 +340,6 @@ body.light-theme .footer__legal-disclaimer {
 .skills-list {
   list-style: none; 
   padding-left: 0;  
-  margin-top: 3em;
-  margin-bottom: 3em;
 }
 
 .skills-list li {
@@ -433,7 +413,6 @@ body.light-theme .skills-list .skill-domain {
 
 .footer ul {
   padding: 0;
-  list-style: none;
 }
 
 .footer li {

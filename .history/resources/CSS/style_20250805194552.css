@@ -358,8 +358,6 @@ body.light-theme .footer__legal-disclaimer {
 .skills-list {
   list-style: none; 
   padding-left: 0;  
-  margin-top: 3em;
-  margin-bottom: 3em;
 }
 
 .skills-list li {
@@ -373,7 +371,7 @@ body.light-theme .footer__legal-disclaimer {
   content: '';
   position: absolute;
   left: 0;
-  top: 0.55em;
+  top: 2em;
   width: 0.5em;
   height: 0.5em;
   background-color: var(--first-color-alt);
