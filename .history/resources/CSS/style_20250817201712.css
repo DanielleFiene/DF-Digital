@@ -426,6 +426,10 @@ body.light-theme .footer__legal-disclaimer {
   transition: transform .18s ease;
 }
 
+/* Center portrait: narrower aspect, a touch taller */
+.showcase__portrait img{
+  aspect-ratio: 4 / 5;
+}
 
 .showcase figure { margin: 0; }
 

@@ -402,8 +402,8 @@ body.light-theme .footer__legal-disclaimer {
   position:relative;
 }
 
-.showcase__item a::after {
-  display: none;
+.showcase__item:hover {
+  text-decoration: none !important;
 }
 
 .showcase__item img{
@@ -426,6 +426,10 @@ body.light-theme .footer__legal-disclaimer {
   transition: transform .18s ease;
 }
 
+/* Center portrait: narrower aspect, a touch taller */
+.showcase__portrait img{
+  aspect-ratio: 4 / 5;
+}
 
 .showcase figure { margin: 0; }
 
@@ -445,15 +449,11 @@ body.light-theme .showcase figcaption{ color:#64748b; }
   }
   .showcase__portrait{ grid-column: 1 / -1; justify-self:center; width:min(360px, 70vw); }
 }
-
 @media (max-width: 560px){
   .showcase{
     grid-template-columns: 1fr;
-    justify-items: center; /* centreren alle items */
   }
-  .showcase__portrait{ 
-    width: min(380px, 84vw); 
-  }
+  .showcase__portrait{ width: min(380px, 84vw); }
 }
 
 /*=============== SKILLS LIST (2 columns, theme-safe) ===============*/
