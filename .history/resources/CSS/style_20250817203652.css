@@ -121,8 +121,7 @@ a img,
 }
 
 a img:hover::after,
-.logo:hover::after,
-.intake_button:hover::after {
+.logo:hover::after {
   width: 0;
 }
 
@@ -552,15 +551,12 @@ body.light-theme .skills-list .skill-domain {
   text-decoration: none;
   transition: all 0.25s ease;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 .intake_button:hover {
   background: var(--first-color-alt);
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-  color: var(--body-color);
 }
 
 .intake_button:active {

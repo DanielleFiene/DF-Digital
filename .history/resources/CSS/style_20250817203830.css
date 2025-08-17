@@ -121,8 +121,7 @@ a img,
 }
 
 a img:hover::after,
-.logo:hover::after,
-.intake_button:hover::after {
+.logo:hover::after {
   width: 0;
 }
 

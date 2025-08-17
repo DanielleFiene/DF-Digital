@@ -116,13 +116,13 @@ a:hover::after {
 }
 
 a img,
-.logo img {
+.logo img
+.intake_button {
   pointer-events: auto;
 }
 
 a img:hover::after,
-.logo:hover::after,
-.intake_button:hover::after {
+.logo:hover::after {
   width: 0;
 }
 
