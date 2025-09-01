@@ -384,9 +384,6 @@ body.light-theme .faq summary:hover {
 
 body.light-theme .tcard__name{ color:#0f172a; }
 body.light-theme .tcard__meta{ color:#475569; }
-body.light-theme .tcard__quote{ color:#1f2937; }
-body.light-theme .tcard__tag{ border-color:#cbd5e1; color:#0f172a; }
-body.light-theme .tcard::after{ color: rgba(14, 165, 233, 0.12); }
 
 /*=============== HEADER ===============*/
 .header {
@@ -653,7 +650,7 @@ body.light-theme .skills-list .skill-domain {
 .testimonials__grid{
   display: grid;
   grid-template-columns: repeat(3, minmax(260px, 1fr));
-  gap: 1.25rem 1.5rem;             
+  gap: 1.25rem 1.5rem;             /* extra lucht tussen cards */
   margin-top: 1.25rem;
 }
 @media (max-width: 1024px){
@@ -703,30 +700,26 @@ body.light-theme .skills-list .skill-domain {
 
 /* Header: naam links, logo rechts; meta eronder */
 .tcard__header{
-  display:flex;
-  flex-direction:column;
+  display:grid;
+  grid-template-columns: 1fr auto;
   align-items:center;
-  gap:.5rem;
-  margin-bottom:.75rem;
-  text-align:center;
+  row-gap:.25rem;
+  column-gap:.5rem;
+  margin-bottom: .25rem;
 }
-
 .tcard__name{ 
   grid-column:1; 
   font-weight:600; 
   color:var(--title-color);
 }
-
 .tcard__logo{
-  height:90px;
+  grid-column:2;
+  justify-self:end;
+  height:22px;
   width:auto;
   object-fit:contain;
   opacity:.9;
-  border-bottom: 1px solid var(--border-color);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-
 .tcard__meta{
   grid-column:1 / -1;
   font-size:.9rem;
@@ -736,7 +729,6 @@ body.light-theme .skills-list .skill-domain {
 /* Quote-typografie (geen “ ” meer in de HTML nodig) */
 .tcard__quote{
   color: var(--text-color);
-  margin: 0;
   line-height: 1.6;
   font-size: 1rem;
   font-style: italic;
@@ -773,17 +765,13 @@ body.light-theme .tcard{
   border: 1px solid #dbe3eb;
   box-shadow: 0 6px 14px rgba(0,0,0,.07);
 }
-
+body.light-theme .tcard__name{ color:#0f172a; }
+body.light-theme .tcard__meta{ color:#475569; }
+body.light-theme .tcard__quote{ color:#1f2937; }
+body.light-theme .tcard__tag{ border-color:#cbd5e1; color:#0f172a; }
+body.light-theme .tcard::after{ color: rgba(14, 165, 233, 0.12); }
 
 .testimonials{ padding: clamp(2.5rem, 6vw, 4rem) 0; }
-
-body.light-theme .tcard__logo_kevin {
-  filter: invert(100%) hue-rotate(182deg) saturate(600%) contrast(200%) brightness(96%);
-  border-bottom: 1px solid grey;
-  border-radius: 7px;
-
-}
-
 
 /*=============== CONTACT ===============*/
 .contact {

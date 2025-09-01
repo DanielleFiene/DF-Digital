@@ -703,30 +703,26 @@ body.light-theme .skills-list .skill-domain {
 
 /* Header: naam links, logo rechts; meta eronder */
 .tcard__header{
-  display:flex;
-  flex-direction:column;
+  display:grid;
+  grid-template-columns: 1fr auto;
   align-items:center;
-  gap:.5rem;
-  margin-bottom:.75rem;
-  text-align:center;
+  row-gap:.25rem;
+  column-gap:.5rem;
+  margin-bottom: .25rem;
 }
-
 .tcard__name{ 
   grid-column:1; 
   font-weight:600; 
   color:var(--title-color);
 }
-
 .tcard__logo{
-  height:90px;
+  grid-column:2;
+  justify-self:end;
+  height:70px;
   width:auto;
   object-fit:contain;
   opacity:.9;
-  border-bottom: 1px solid var(--border-color);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-
 .tcard__meta{
   grid-column:1 / -1;
   font-size:.9rem;
@@ -736,7 +732,6 @@ body.light-theme .skills-list .skill-domain {
 /* Quote-typografie (geen “ ” meer in de HTML nodig) */
 .tcard__quote{
   color: var(--text-color);
-  margin: 0;
   line-height: 1.6;
   font-size: 1rem;
   font-style: italic;
@@ -776,14 +771,6 @@ body.light-theme .tcard{
 
 
 .testimonials{ padding: clamp(2.5rem, 6vw, 4rem) 0; }
-
-body.light-theme .tcard__logo_kevin {
-  filter: invert(100%) hue-rotate(182deg) saturate(600%) contrast(200%) brightness(96%);
-  border-bottom: 1px solid grey;
-  border-radius: 7px;
-
-}
-
 
 /*=============== CONTACT ===============*/
 .contact {

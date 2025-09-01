@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Filter Tuner</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f1f5f9;
+      color: #111;
+      text-align: center;
+      padding: 2rem;
+    }
+    img {
+      max-width: 200px;
+      display: block;
+      margin: 1rem auto;
+      transition: filter 0.2s ease;
+    }
+    .sliders {
+      max-width: 500px;
+      margin: 2rem auto;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin: 0.75rem 0 0.25rem;
+      font-weight: bold;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    code {
+      display: block;
+      margin-top: 1rem;
+      background: #e2e8f0;
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎨 CSS Filter Tuner</h1>
+  <p>Pas de sliders aan en kijk hoe je logo verandert.</p>
+  <img id="logo" src="/resources/images/red rocket.webp" alt="Logo">
+
+  <div class="sliders">
+    <label>Invert (%)</label>
+    <input type="range" id="invert" min="0" max="100" value="100">
+    
+    <label>Hue Rotate (°)</label>
+    <input type="range" id="hue" min="0" max="360" value="175">
+    
+    <label>Saturate (%)</label>
+    <input type="range" id="saturate" min="0" max="600" value="400">
+    
+    <label>Contrast (%)</label>
+    <input type="range" id="contrast" min="50" max="200" value="130">
+    
+    <label>Brightness (%)</label>
+    <input type="range" id="brightness" min="50" max="150" value="100">
+  </div>
+
+  <code id="cssOutput"></code>
+
+  <script>
+    const logo = document.getElementById("logo");
+    const output = document.getElementById("cssOutput");
+    const sliders = document.querySelectorAll("input[type=range]");
+
+    function updateFilter() {
+      const invert = document.getElementById("invert").value;
+      const hue = document.getElementById("hue").value;
+      const saturate = document.getElementById("saturate").value;
+      const contrast = document.getElementById("contrast").value;
+      const brightness = document.getElementById("brightness").value;
+
+      const filter = `invert(${invert}%) hue-rotate(${hue}deg) saturate(${saturate}%) contrast(${contrast}%) brightness(${brightness}%)`;
+      logo.style.filter = filter;
+      output.textContent = `filter: ${filter};`;
+    }
+
+    sliders.forEach(slider => slider.addEventListener("input", updateFilter));
+    updateFilter(); // init
+  </script>
+</body>
+</html>

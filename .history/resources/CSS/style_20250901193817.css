@@ -334,11 +334,11 @@ body.light-theme .footer__legal-disclaimer {
   border-top: 1px solid var(--first-color-dark);
 }
 
-/* === LIGHT THEME (Services page) === */
+/* === LIGHT THEME FIXES (Services page) === */
 
 /* Cards */
 body.light-theme .card{
-  background: #cee0f0;
+  background: #e0f2fe;
   border-color: #cbd5e1;
   color: #0f172a;            /* body text in card */
 }
@@ -374,19 +374,6 @@ body.light-theme .card a,
 body.light-theme .faq a{ color:#0ea5e9; }
 body.light-theme .card a:hover,
 body.light-theme .faq a:hover{ color: var(--first-color-dark); }
-
-/* LIGHT THEME FAQ hover */
-body.light-theme .faq summary:hover {
-  color: var(--first-color-dark); /* iets donkerder blauw */
-}
-
-/*=============== LIGHT THEME TESTIMONIALS PAGE ===============*/
-
-body.light-theme .tcard__name{ color:#0f172a; }
-body.light-theme .tcard__meta{ color:#475569; }
-body.light-theme .tcard__quote{ color:#1f2937; }
-body.light-theme .tcard__tag{ border-color:#cbd5e1; color:#0f172a; }
-body.light-theme .tcard::after{ color: rgba(14, 165, 233, 0.12); }
 
 /*=============== HEADER ===============*/
 .header {
@@ -443,7 +430,7 @@ body.light-theme .tcard::after{ color: rgba(14, 165, 233, 0.12); }
   margin-top: 1rem;
 }
 
-/* === Triple showcase === */
+/* === Triple showcase (portrait center, UIs left/right) === */
 .showcase{
   display:grid;
   grid-template-columns: 1fr minmax(240px, 360px) 1fr; /* L | portrait | R */
@@ -621,169 +608,6 @@ body.light-theme .skills-list .skill-domain {
   transform: translateY(0);
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
-
-.faq {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.faq details {
-  border: 1px solid #c0d0e3;   
-  border-radius: 8px;          
-  padding: 1rem 1.25rem;
-  margin-bottom: 1rem;     
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  width: 70%;
-}
-
-.faq summary {
-  cursor: pointer;
-  padding: 0.25rem 0;
-  transition: color 0.2s ease;
-}
-
-.faq summary:hover {
-  color: var(--first-color);
-}
-
-/*=============== TESTIMONIALS PAGE ===============*/
-
-/* Grid met meer ruimte tussen kaarten */
-.testimonials__grid{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(260px, 1fr));
-  gap: 1.25rem 1.5rem;             
-  margin-top: 1.25rem;
-}
-@media (max-width: 1024px){
-  .testimonials__grid{ grid-template-columns: repeat(2, minmax(260px, 1fr)); }
-}
-@media (max-width: 640px){
-  .testimonials__grid{ grid-template-columns: 1fr; }
-}
-
-/* Kaart basis (met quote-accent) */
-.tcard{
-  position: relative;
-  background: var(--container-color1);
-  border: 1px solid var(--border-color);
-  border-radius: 14px;
-  padding: 1.2rem 1.2rem 1.2rem 1.4rem;
-  box-shadow: 0 8px 28px rgba(0,0,0,.18);
-  display: flex; 
-  flex-direction: column; 
-  gap: .75rem;
-  min-height: 220px;
-  overflow: hidden;
-}
-
-/* Linker kleuraccent voor ‘quote’-gevoel */
-.tcard::before{
-  content:"";
-  position:absolute;
-  left:0; top:0; bottom:0;
-  width: 3px;
-  background: linear-gradient(180deg, var(--first-color), var(--first-color-alt));
-  opacity: .9;
-}
-
-/* Grote decoratieve quote */
-.tcard::after{
-  content: "“";
-  position: absolute;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 84px;
-  line-height: 1;
-  left: 10px;
-  top: -10px;
-  color: rgba(125, 211, 252, 0.12); /* soft cyaan */
-  pointer-events: none;
-}
-
-/* Header: naam links, logo rechts; meta eronder */
-.tcard__header{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:.5rem;
-  margin-bottom:.75rem;
-  text-align:center;
-}
-
-.tcard__name{ 
-  grid-column:1; 
-  font-weight:600; 
-  color:var(--title-color);
-}
-
-.tcard__logo{
-  height:90px;
-  width:auto;
-  object-fit:contain;
-  opacity:.9;
-  border-bottom: 1px solid var(--border-color);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.tcard__meta{
-  grid-column:1 / -1;
-  font-size:.9rem;
-  color:var(--text-color-light);
-}
-
-/* Quote-typografie (geen “ ” meer in de HTML nodig) */
-.tcard__quote{
-  color: var(--text-color);
-  margin: 0;
-  line-height: 1.6;
-  font-size: 1rem;
-  font-style: italic;
-}
-
-.tcard__footer{ 
-  display:flex; 
-  flex-wrap:wrap; 
-  gap:.5rem; 
-  margin-top:.25rem; 
-}
-.tcard__tag{ 
-  font-size: .8rem; 
-  padding: .25rem .6rem; 
-  border-radius: 999px; 
-  border: 1px solid var(--border-color); 
-  color: var(--text-color);
-}
-
-/* Hover subtiel liften (desktop) */
-@media (hover: hover){
-  .tcard{ transition: transform .18s ease, box-shadow .18s ease; }
-  .tcard:hover{ transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,.22); }
-}
-
-/* Responsief: logos iets kleiner op small screens */
-@media (max-width: 480px){
-  .tcard__logo{ height:18px; }
-}
-
-/* Light theme varianten */
-body.light-theme .tcard{
-  background: #f1f5f9;
-  border: 1px solid #dbe3eb;
-  box-shadow: 0 6px 14px rgba(0,0,0,.07);
-}
-
-
-.testimonials{ padding: clamp(2.5rem, 6vw, 4rem) 0; }
-
-body.light-theme .tcard__logo_kevin {
-  filter: invert(100%) hue-rotate(182deg) saturate(600%) contrast(200%) brightness(96%);
-  border-bottom: 1px solid grey;
-  border-radius: 7px;
-
-}
-
 
 /*=============== CONTACT ===============*/
 .contact {

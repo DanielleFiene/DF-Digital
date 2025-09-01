@@ -718,13 +718,11 @@ body.light-theme .skills-list .skill-domain {
 }
 
 .tcard__logo{
-  height:90px;
+  height:70px;
   width:auto;
   object-fit:contain;
   opacity:.9;
   border-bottom: 1px solid var(--border-color);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .tcard__meta{
@@ -776,14 +774,6 @@ body.light-theme .tcard{
 
 
 .testimonials{ padding: clamp(2.5rem, 6vw, 4rem) 0; }
-
-body.light-theme .tcard__logo_kevin {
-  filter: invert(100%) hue-rotate(182deg) saturate(600%) contrast(200%) brightness(96%);
-  border-bottom: 1px solid grey;
-  border-radius: 7px;
-
-}
-
 
 /*=============== CONTACT ===============*/
 .contact {
