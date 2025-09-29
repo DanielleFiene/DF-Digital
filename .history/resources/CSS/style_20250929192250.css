@@ -489,11 +489,7 @@ body.light-theme .tcard::after{ color: rgba(14, 165, 233, 0.12); }
 }
 
 .showcase__item{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position:relative;
 }
 
 .showcase__item a::after {
@@ -506,7 +502,6 @@ body.light-theme .tcard::after{ color: rgba(14, 165, 233, 0.12); }
   height: 200px;
   display:block;
   object-fit: cover; /* Better for consistent sizing */
-  object-position: center; /* Center the image content */
   border:1px solid var(--border-color);
   border-radius: 12px;
   background: var(--container-color1);
@@ -514,17 +509,61 @@ body.light-theme .tcard::after{ color: rgba(14, 165, 233, 0.12); }
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  transform-origin: center center; /* Ensure consistent transform origin */
 }
 
-/* Simple card pop-up hover effect with subtle glow */
+/* Professional hover effects */
 .showcase__item:hover img {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 0 20px rgba(56, 189, 248, 0.3);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(56, 189, 248, 0.25);
   border-color: var(--first-color-light);
 }
 
-/* All showcase images now have consistent sizing */
+/* Subtle glow effect on hover */
+.showcase__item::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--first-color), var(--second-color), var(--first-color));
+  border-radius: 14px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.showcase__item:hover::before {
+  opacity: 0.6;
+}
+
+/* Image overlay effect */
+.showcase__item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(250, 204, 21, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.showcase__item:hover::after {
+  opacity: 1;
+}
+
+/* Side UI screenshots: wide aspect, slight hover */
+.showcase__ui img{
+  aspect-ratio: 16 / 10;
+}
+.showcase__ui:hover img{
+  transform: translateY(-2px);
+  transition: transform .18s ease;
+}
 
 
 .showcase figure { margin: 0; }
@@ -541,7 +580,7 @@ body.light-theme .tcard::after{ color: rgba(14, 165, 233, 0.12); }
 
 /* Caption hover effects */
 .showcase__item:hover figcaption {
-  color: #ffffff;
+  color: #000000;
   transform: translateY(-2px);
   font-weight: 600;
 }
@@ -554,12 +593,23 @@ body.light-theme .showcase__item img {
   box-shadow: 0 8px 28px rgba(0,0,0,.1);
 }
 
+body.light-theme .showcase__ui:hover img {
+  box-shadow: 0 12px 40px rgba(14, 165, 233, 0.15);
+}
 
-/* Light theme hover effects - simple card pop-up with glow */
+/* Light theme hover effects */
 body.light-theme .showcase__item:hover img {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 0 20px rgba(14, 165, 233, 0.4);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(14, 165, 233, 0.2);
   border-color: #0ea5e9;
+}
+
+body.light-theme .showcase__item::before {
+  background: linear-gradient(45deg, #0ea5e9, #f59e0b, #0ea5e9);
+}
+
+body.light-theme .showcase__item::after {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
 }
 
 body.light-theme .showcase__item:hover figcaption {
@@ -928,24 +978,7 @@ body.light-theme .tcard__logo_kevin {
 /*=============== CONTACT ===============*/
 .contact {
   margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 500px;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, var(--container-color1) 0%, var(--container-color2) 100%);
-  border-radius: 12px;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  text-align: center;
-}
-
-/* Light theme contact styling */
-body.light-theme .contact {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  border: 1px solid #cbd5e1;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;;
 }
 
 /*=============== FOOTER ===============*/

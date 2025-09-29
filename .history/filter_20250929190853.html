@@ -64,7 +64,6 @@
       background: #334155;
       outline: none;
       -webkit-appearance: none;
-      appearance: none;
     }
     
     input[type="range"]::-webkit-slider-thumb {
@@ -134,22 +133,20 @@
   <img id="logo" src="/resources/images/red rocket.webp" alt="Logo">
 
   <div class="sliders">
-    <label>Invert (%) <span class="value-display" id="invert-value">100</span></label>
+    <label>Invert (%)</label>
     <input type="range" id="invert" min="0" max="100" value="100">
     
-    <label>Hue Rotate (°) <span class="value-display" id="hue-value">175</span></label>
+    <label>Hue Rotate (°)</label>
     <input type="range" id="hue" min="0" max="360" value="175">
     
-    <label>Saturate (%) <span class="value-display" id="saturate-value">400</span></label>
+    <label>Saturate (%)</label>
     <input type="range" id="saturate" min="0" max="600" value="400">
     
-    <label>Contrast (%) <span class="value-display" id="contrast-value">130</span></label>
+    <label>Contrast (%)</label>
     <input type="range" id="contrast" min="50" max="200" value="130">
     
-    <label>Brightness (%) <span class="value-display" id="brightness-value">100</span></label>
+    <label>Brightness (%)</label>
     <input type="range" id="brightness" min="50" max="150" value="100">
-    
-    <button class="reset-btn" onclick="resetFilters()">Reset to Default</button>
   </div>
 
   <code id="cssOutput"></code>
@@ -158,22 +155,6 @@
     const logo = document.getElementById("logo");
     const output = document.getElementById("cssOutput");
     const sliders = document.querySelectorAll("input[type=range]");
-
-    // Value display elements
-    const invertValue = document.getElementById("invert-value");
-    const hueValue = document.getElementById("hue-value");
-    const saturateValue = document.getElementById("saturate-value");
-    const contrastValue = document.getElementById("contrast-value");
-    const brightnessValue = document.getElementById("brightness-value");
-
-    // Default values
-    const defaults = {
-      invert: 100,
-      hue: 175,
-      saturate: 400,
-      contrast: 130,
-      brightness: 100
-    };
 
     function updateFilter() {
       const invert = document.getElementById("invert").value;
@@ -185,22 +166,6 @@
       const filter = `invert(${invert}%) hue-rotate(${hue}deg) saturate(${saturate}%) contrast(${contrast}%) brightness(${brightness}%)`;
       logo.style.filter = filter;
       output.textContent = `filter: ${filter};`;
-      
-      // Update value displays
-      invertValue.textContent = invert;
-      hueValue.textContent = hue;
-      saturateValue.textContent = saturate;
-      contrastValue.textContent = contrast;
-      brightnessValue.textContent = brightness;
-    }
-
-    function resetFilters() {
-      document.getElementById("invert").value = defaults.invert;
-      document.getElementById("hue").value = defaults.hue;
-      document.getElementById("saturate").value = defaults.saturate;
-      document.getElementById("contrast").value = defaults.contrast;
-      document.getElementById("brightness").value = defaults.brightness;
-      updateFilter();
     }
 
     sliders.forEach(slider => slider.addEventListener("input", updateFilter));

@@ -55,11 +55,6 @@ html {
   overflow-x: hidden;
 }
 
-/* Smooth page transitions */
-* {
-  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-}
-
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -74,18 +69,6 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
   letter-spacing: 0.02em;
-  animation: fadeIn 0.8s ease-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 h1,
@@ -201,26 +184,12 @@ button {
 .responsive-img {
   width: clamp(250px, 80%, 800px);
   margin-bottom: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-  transition: all 0.4s ease;
-  filter: brightness(0.95) contrast(1.05);
-}
-
-.responsive-img:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 30px 80px rgba(56, 189, 248, 0.2);
-  filter: brightness(1) contrast(1.1);
 }
 
 @media (max-width: 768px) {
   .responsive-img {
     width: 80%;
     max-width: 300px;
-  }
-  
-  .responsive-img:hover {
-    transform: translateY(-4px) scale(1.01);
   }
 }
 
@@ -310,9 +279,7 @@ body.light-theme {
     #e5e7eb 40%,
     #cbd5e1 100%
   );
-  background-attachment: fixed;
   color: #0f172a;
-  animation: fadeIn 0.8s ease-out;
 }
 
 body.light-theme .header {
@@ -479,21 +446,15 @@ body.light-theme .tcard::after{ color: rgba(14, 165, 233, 0.12); }
 /* === Triple showcase === */
 .showcase{
   display:grid;
-  grid-template-columns: repeat(3, 1fr); /* Equal width columns */
-  gap: clamp(1rem, 3vw, 2rem);
-  align-items: start; /* Align to top for better consistency */
-  justify-items: center; /* Center items within their grid cells */
+  grid-template-columns: 1fr minmax(240px, 360px) 1fr; /* L | portrait | R */
+  gap: clamp(.8rem, 2vw, 1.25rem);
+  align-items:center;
   margin: 1.5rem auto 2.5rem;
   margin-top: 3rem;
-  max-width: 1000px;
 }
 
 .showcase__item{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position:relative;
 }
 
 .showcase__item a::after {
@@ -501,30 +462,24 @@ body.light-theme .tcard::after{ color: rgba(14, 165, 233, 0.12); }
 }
 
 .showcase__item img{
-  width: 100%;
-  max-width: 280px;
-  height: 200px;
+  width:300px;
+  height:200px;
   display:block;
-  object-fit: cover; /* Better for consistent sizing */
-  object-position: center; /* Center the image content */
+  object-fit: contain;
   border:1px solid var(--border-color);
   border-radius: 12px;
   background: var(--container-color1);
   box-shadow: 0 8px 28px rgba(0,0,0,.28);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  transform-origin: center center; /* Ensure consistent transform origin */
 }
 
-/* Simple card pop-up hover effect with subtle glow */
-.showcase__item:hover img {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 0 20px rgba(56, 189, 248, 0.3);
-  border-color: var(--first-color-light);
+/* Side UI screenshots: wide aspect, slight hover */
+.showcase__ui img{
+  aspect-ratio: 16 / 10;
 }
-
-/* All showcase images now have consistent sizing */
+.showcase__ui:hover img{
+  transform: translateY(-2px);
+  transition: transform .18s ease;
+}
 
 
 .showcase figure { margin: 0; }
@@ -534,60 +489,25 @@ body.light-theme .tcard::after{ color: rgba(14, 165, 233, 0.12); }
   margin-top: .45rem;
   font-size: .9rem;
   color: var(--text-color-light);
-  text-align: center;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-/* Caption hover effects */
-.showcase__item:hover figcaption {
-  color: #ffffff;
-  transform: translateY(-2px);
-  font-weight: 600;
+  text-align: left;
 }
 body.light-theme .showcase figcaption{ color:#64748b; }
-
-/* Light theme showcase images */
-body.light-theme .showcase__item img {
-  border: 1px solid #cbd5e1;
-  background: #f8fafc;
-  box-shadow: 0 8px 28px rgba(0,0,0,.1);
-}
-
-
-/* Light theme hover effects - simple card pop-up with glow */
-body.light-theme .showcase__item:hover img {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 0 20px rgba(14, 165, 233, 0.4);
-  border-color: #0ea5e9;
-}
-
-body.light-theme .showcase__item:hover figcaption {
-  color: #000000;
-  font-weight: 600;
-}
 
 /* Responsive: two rows on tablets, single column on small phones */
 @media (max-width: 900px){
   .showcase{
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
   }
-  .showcase__item:last-child{ 
-    grid-column: 1 / -1; 
-    justify-self: center;
-    max-width: 300px;
-  }
+  .showcase__portrait{ grid-column: 1 / -1; justify-self:center; width:min(360px, 70vw); }
 }
 
 @media (max-width: 560px){
   .showcase{
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    justify-items: center;
+    justify-items: center; /* centreren alle items */
   }
-  .showcase__item img {
-    max-width: 320px;
+  .showcase__portrait{ 
+    width: min(380px, 84vw); 
   }
 }
 
@@ -902,18 +822,6 @@ body.light-theme .tcard{
   box-shadow: 0 6px 14px rgba(0,0,0,.07);
 }
 
-/* Light theme testimonials hover effects */
-@media (hover: hover){
-  body.light-theme .tcard{ 
-    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; 
-  }
-  body.light-theme .tcard:hover{ 
-    transform: translateY(-4px); 
-    box-shadow: 0 12px 40px rgba(14, 165, 233, 0.15); 
-    border-color: #0ea5e9;
-  }
-}
-
 
 .testimonials{ padding: clamp(2.5rem, 6vw, 4rem) 0; }
 
@@ -928,24 +836,7 @@ body.light-theme .tcard__logo_kevin {
 /*=============== CONTACT ===============*/
 .contact {
   margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 500px;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, var(--container-color1) 0%, var(--container-color2) 100%);
-  border-radius: 12px;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  text-align: center;
-}
-
-/* Light theme contact styling */
-body.light-theme .contact {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  border: 1px solid #cbd5e1;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;;
 }
 
 /*=============== FOOTER ===============*/

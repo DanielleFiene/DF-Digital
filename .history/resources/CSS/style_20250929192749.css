@@ -541,7 +541,7 @@ body.light-theme .tcard::after{ color: rgba(14, 165, 233, 0.12); }
 
 /* Caption hover effects */
 .showcase__item:hover figcaption {
-  color: #ffffff;
+  color: #000000;
   transform: translateY(-2px);
   font-weight: 600;
 }
