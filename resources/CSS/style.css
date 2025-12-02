@@ -715,6 +715,29 @@ body.light-theme .skills-list .skill-domain {
   margin-top: 0;
 }
 
+.price-note {
+  max-width: 720px;
+  margin: 0.5rem auto 0;
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  line-height: 1.5;
+  text-align: center;
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid var(--first-color-alt);
+  border-radius: 6px;
+  background: radial-gradient(circle at top left,
+    rgba(56, 189, 248, 0.08),
+    transparent 55%);
+}
+
+/* Light theme variant */
+body.light-theme .price-note {
+  color: #475569;
+  background: rgba(148, 163, 184, 0.08);
+  border-left-color: #0ea5e9;
+}
+
+
 .intake_button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
