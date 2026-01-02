@@ -32,8 +32,10 @@
         <img src="/resources/images/logo/Logo_blue.png" alt="DF Digital logo" />
       </a>
       <ul>
+        <li><a href="/">Home</a></li>
         <li><a href="/testimonials.html" aria-current="page">Testimonials</a></li>
         <li><a href="/services.html">Services</a></li>
+        <li><a href="/contact.html">Contact</a></li>
       </ul>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark mode">
         <i class="fa-solid fa-moon"></i>
@@ -53,7 +55,7 @@
       <!-- Starfeed (K. B., NL) -->
         <article class="tcard" itemprop="itemListElement" itemscope itemtype="https://schema.org/Review">
             <div class="tcard__header">
-                <img class="tcard__logo_kevin" src="/resources/images/red rocket.webp" alt="Starfeed logo" loading="lazy" decoding="async">
+                <img class="tcard__logo_kevin" src="/resources/images/starfeed.webp" alt="Starfeed logo" loading="lazy" decoding="async">
                 <strong class="tcard__name" itemprop="author" itemscope itemtype="https://schema.org/Person">
                 <span itemprop="name">Kevin Bruggink</span>
                 </strong>
@@ -65,9 +67,7 @@
             </blockquote>
 
             <div class="tcard__footer">
-                <span class="tcard__tag">React</span>
-                <span class="tcard__tag">TypeScript</span>
-                <span class="tcard__tag">Next.js</span>
+                <a href="https://app.starfeed.nl" target="_blank" rel="noopener noreferrer" class="tcard__website-link">Visit website →</a>
             </div>
             <meta itemprop="reviewRating" content="5">
             </article>
@@ -83,17 +83,12 @@
             </div>
 
             <blockquote class="tcard__quote" itemprop="reviewBody">
-                We got a new website in five languages with a clean, friendly layout that’s perfect for anglers. 
-                <br>It’s fast, very easy to use, and we’re really happy with the result.
+                We got a new website in five languages with a clean, friendly layout that's perfect for anglers. 
+                <br>It's fast, very easy to use, and we're really happy with the result.
             </blockquote>
 
             <div class="tcard__footer">
-                <span class="tcard__tag">HTML</span>
-                <span class="tcard__tag">CSS</span>
-                <span class="tcard__tag">Vanilla JS</span>
-                <span class="tcard__tag">Multilingual (5)</span>
-                <span class="tcard__tag">UX</span>
-                <span class="tcard__tag">Mobile</span>
+                <a href="https://fishingandrelax.cz" target="_blank" rel="noopener noreferrer" class="tcard__website-link">Visit website →</a>
             </div>
             <meta itemprop="reviewRating" content="5">
             </article>
@@ -114,10 +109,7 @@
         </blockquote>
 
         <div class="tcard__footer">
-            <span class="tcard__tag">AI Builder</span>
-            <span class="tcard__tag">Performance</span>
-            <span class="tcard__tag">SEO</span>
-            <span class="tcard__tag">Hosting &amp; SSL</span>
+            <a href="https://worldviewinvestmentmanagement.com" target="_blank" rel="noopener noreferrer" class="tcard__website-link">Visit website →</a>
         </div>
         <meta itemprop="reviewRating" content="5">
         </article>
@@ -139,12 +131,7 @@
         </blockquote>
 
         <div class="tcard__footer">
-            <span class="tcard__tag">HTML</span>
-            <span class="tcard__tag">CSS</span>
-            <span class="tcard__tag">SEO</span>
-            <span class="tcard__tag">Hosting &amp; SSL</span>
-            <span class="tcard__tag">Responsive</span>
-            <span class="tcard__tag">UX</span>
+            <a href="https://eastportinvest.com" target="_blank" rel="noopener noreferrer" class="tcard__website-link">Visit website →</a>
         </div>
         <meta itemprop="reviewRating" content="5">
         </article>
@@ -177,7 +164,7 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <p>© 2025 DF Digital. All rights reserved.</p>
+      <p>© <span id="copyright-year">2025</span> DF Digital. All rights reserved.</p>
     </div>
     <div class="footer__legal-disclaimer">
       <p><strong>DF Digital</strong> is a trade name of 2. Brabant CZ, spol. s r.o.</p>
@@ -186,6 +173,12 @@
     </div>
   </footer>
 
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
   <script src="/resources/JS/theme_toggle.js"></script>
+  <script src="/resources/JS/main.js"></script>
 </body>
 </html>

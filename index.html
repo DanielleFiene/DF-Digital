@@ -12,13 +12,13 @@
  
   <!-- Social media preview -->
   <meta property="og:title" content="DF Digital | Full-Stack & SaaS Engineering by Danielle Fiene" />
-  <meta property="og:description" content="Modern, secure and scalable web platforms by full-stack developer Danielle Fiene. Frontend, backend, cloud and infrastructure in één." />   <meta property="og:type" content="website" />
+  <meta property="og:description" content="Modern, secure and scalable web platforms by full-stack developer Danielle Fiene. SaaS platforms, geospatial mapping, API integration, cloud infrastructure." />   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.dfdigital.eu" />
   <meta property="og:image" content="https://www.dfdigital.eu/resources/images/logo/" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="DF Digital | Portfolio of Danielle Fiene" />
-  <meta name="twitter:description" content="Explore the upcoming personal website of Danielle Fiene, junior front-end developer." />
+  <meta name="twitter:description" content="Full-stack & SaaS development by Danielle Fiene. Building production-ready applications with React, Next.js, TypeScript, Node.js, PostgreSQL and GCP." />
   <meta name="twitter:image" content="https://www.dfdigital.eu/resources/images/preview.jpg" />
 
   <!-- Favicons -->
@@ -41,8 +41,10 @@
         <img src="/resources/images/logo/Logo_blue.png" alt="DF Digital logo" />
       </a>
       <ul>
+        <li><a href="/">Home</a></li>
         <li><a href="/testimonials.html">Testimonials</a></li>
         <li><a href="/services.html">Services</a></li>
+        <li><a href="/contact.html">Contact</a></li>
       </ul>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark mode">
         <i class="fa-solid fa-moon"></i>
@@ -52,98 +54,321 @@
 
   <!-- Main content wrapper -->
 <main class="main">
+  <!-- 1. HERO SECTION -->
+  <section class="hero">
+    <h1>SaaS Platforms & Full-Stack Development</h1>
+    <p class="hero__subtitle">Building production-ready applications</p>
+    <p class="hero__description">
+      I create web applications and platforms that serve real users and real business needs.
+    </p>
+  </section>
+
+  <!-- 2. INTRO/ABOUT SECTION -->
   <section class="intro">
-    <h1>SaaS & Web Solutions That Work</h1>
+    <h2>About</h2>
+    <p>
+      I'm <strong>Danielle Fiene</strong> — a full-stack engineer specializing in SaaS platforms and web applications.
+    </p>
+    <p>
+      I build complete systems: user interfaces, APIs, databases, authentication, payment processing, 
+      cloud infrastructure, and deployment pipelines. My recent work includes <strong>Starfeed</strong> (a multi-tenant 
+      review platform with paying customers) and advanced geospatial features for a traffic analytics 
+      web application.
+    </p>
+    <p>
+      <strong>Tech stack:</strong> TypeScript, React, Next.js, Node.js, PostgreSQL, Prisma, Google Cloud Platform, 
+      Docker, GitHub Actions. I integrate third-party APIs (WhatsApp, OpenAI, Stripe, Google Maps, 
+      Mapbox) and handle authentication (SuperTokens, Google OAuth), monitoring, security, and reliability.
+    </p>
+    <p>
+      Originally from the Netherlands, I work with teams across Europe — remote or hybrid — to build 
+      reliable platforms.
+    </p>
+  </section>
+
+  <!-- 3. CASE STUDIES SECTION -->
+  <section class="case-studies">
+    <h2>Recent Projects</h2>
     
-    <h2>Full-Stack & Cloud Development by Danielle Fiene</h2>
-    
-    <!-- Project Showcase -->
-    <div class="showcase">
-      <div class="showcase__item showcase__ui">
-        <figure>
-          <a href="https://www.fishingandrelax.cz/nl/index.html" target="_blank" rel="noopener noreferrer">
-            <img src="/resources/images/fishing_and_relax.png" alt="Fishing and Relax project screenshot" />
-          </a>
-          <figcaption>Fishing and Relax - Multilingual website (NL/EN/CZ) built with responsive UI, optimized for SEO and fast loading.</figcaption>
-        </figure>
+    <!-- STARFEED -->
+    <div class="case-study">
+      <h3>Starfeed</h3>
+      <p class="case-study__tagline">Multi-tenant SaaS platform for restaurant review collection</p>
+      
+      <p class="case-study__description">
+        Production platform with paying customers across 20+ restaurant locations. 
+        Customers scan QR codes → WhatsApp conversational flow → AI-powered analysis → 
+        actionable insights in admin dashboard.
+      </p>
+      
+      <div class="case-study__details">
+        <p><strong>Role:</strong> Sole developer (architecture, backend, frontend, DevOps, operations)</p>
+        <p><strong>Timeline:</strong> August 2024 - Present</p>
+        <p><strong>Status:</strong> Live in production</p>
       </div>
       
-      <div class="showcase__item showcase__portrait">
-        <figure>
-          <a href="https://www.eastportinvest.com/" target="_blank" rel="noopener noreferrer">
-            <img src="/resources/images/EPI.png" alt="EPI project screenshot" />
-          </a>
-          <figcaption>East Port Invest - Corporate website with clean design, security best practices and modern front-end stack.</figcaption>
-        </figure>
-      </div>
+      <p><strong>Technical highlights:</strong></p>
+      <ul>
+        <li>Multi-tenant architecture with complete data isolation</li>
+        <li>React + TypeScript frontend, Node.js + Express backend</li>
+        <li>PostgreSQL database with Prisma ORM</li>
+        <li>Google Cloud Platform (Cloud Run, Cloud SQL, Cloud Scheduler)</li>
+        <li>CI/CD pipeline with GitHub Actions</li>
+        <li>Docker containerization for all services</li>
+        <li>Integrations: WhatsApp Business API, OpenAI, Stripe payments, Google Places API</li>
+        <li>SuperTokens authentication (signup wizard) with Google OAuth for login</li>
+        <li>Comprehensive health monitoring with Slack alerts</li>
+        <li>SSL/TLS with auto-renewal, security headers, CORS configuration</li>
+      </ul>
       
-      <div class="showcase__item showcase__ui">
-        <figure>
-          <a href="https://worldviewinvestmentmanagement.com/" target="_blank" rel="noopener noreferrer">
-            <img src="/resources/images/WVIM.png" alt="WVIM project screenshot" />
-          </a>
-          <figcaption>Worldview Investment Management - High-credibility website for an investment firm, optimized for security and performance.</figcaption>
-        </figure>
+      <p class="case-study__note">
+        <em>Code is proprietary and under NDA. Technical details available on request.</em>
+      </p>
+      
+      <div class="case-study__tags">
+        <span>TypeScript</span>
+        <span>React</span>
+        <span>Node.js</span>
+        <span>PostgreSQL</span>
+        <span>Prisma</span>
+        <span>GCP</span>
+        <span>Docker</span>
+        <span>Multi-tenant</span>
       </div>
     </div>
-      <p>
-        I’m <strong>Danielle Fiene</strong> — a <strong>full-stack developer & SaaS engineer</strong> focused on creating fast,
-        secure and maintainable platforms. I work across the full stack: from user-facing interfaces to APIs, databases,
-        authentication and cloud infrastructure.<br><br>
+    
+    <!-- DOKDATA -->
+    <div class="case-study">
+      <h3>DokData - Geospatial Search & Analysis Features</h3>
+      <p class="case-study__tagline">Frontend development for traffic analytics platform</p>
+      
+      <p class="case-study__description">
+        Built advanced search, filtering, and data visualization components for a geospatial 
+        web application used for road safety analysis across Europe.
       </p>
-
-      <p>
-        My main toolkit includes <strong>React</strong>, <strong>Next.js</strong>, <strong>TypeScript</strong> and
-        <strong>Node.js</strong>, backed by <strong>PostgreSQL</strong> and modern cloud services. I regularly work with
-        authentication systems, role-based access, subscriptions, CI/CD pipelines and other “under-the-hood” components that
-        keep products reliable in production.<br><br>
+      
+      <div class="case-study__details">
+        <p><strong>Role:</strong> Frontend Developer (freelance)</p>
+        <p><strong>Timeline:</strong> May 2024 - February 2025</p>
+        <p><strong>Tech:</strong> React, TypeScript, Mapbox GL JS, Leaflet, Turf.js</p>
+      </div>
+      
+      <p><strong>What I built:</strong></p>
+      <ul>
+        <li><strong>Smart geocoding search:</strong> Address/street/highway search across Europe with intelligent API routing (Photon for addresses, Nominatim for highways). Handles 18+ European languages with street name normalization, diacritic folding, and multiple postcode formats. Multi-tier caching (localStorage + in-memory with TTL) for improved performance.</li>
+        
+        <li><strong>Street View optimization:</strong> Solved a performance issue where the previous implementation loaded all 100 Street View images immediately when the top 100 table was displayed. Implemented lazy-loading pattern where images only load when the user clicks the dropdown, reducing initial API calls from 100+ to zero. Each image loads on-demand with a single API call per request, significantly improving page load performance and reducing API costs.</li>
+        
+        <li><strong>Advanced Excel export:</strong> Built export system that generates spreadsheets with embedded Street View images (parallel loading with 4 concurrent requests, base64 conversion), map screenshots, calculated risk scores, and dynamic formulas using ExcelJS.</li>
+        
+        <li><strong>Map style switching:</strong> Implemented basemap selector that preserves custom data layers when switching between street/satellite/dark modes, with dynamic color adaptation for optimal visibility.</li>
+      </ul>
+      
+      <p class="case-study__note">
+        <em>Code is proprietary and under NDA. Technical details available on request.</em>
       </p>
-
-      <p>
-        Originally from the Netherlands, I collaborate with teams and clients across Europe — remote or on-site —
-        to design and build dependable, modern web applications and internal tools.
-      </p>
-
-
-    <ul class="skills-list">
-      <li>
-        <strong>Building modern web apps</strong> with React, Next.js & TypeScript
-        <span class="skill-domain"><br>/ front-end</span>
-      </li>
-      <li>
-        <strong>Designing and implementing APIs</strong> with Node.js & TypeScript
-        <span class="skill-domain"><br>/ back-end</span>
-      </li>
-      <li>
-        <strong>Working with SQL & PostgreSQL</strong> using Prisma and structured data models
-        <span class="skill-domain"><br>/ data & persistence</span>
-      </li>
-      <li>
-        <strong>Setting up secure infrastructure</strong> with domains, SSL and HTTPS
-        <span class="skill-domain"><br>/ infrastructure</span>
-      </li>
-      <li>
-        <strong>Improving reliability & delivery</strong> for email and background workflows
-        <span class="skill-domain"><br>/ systems & automation</span>
-      </li>
-      <li>
-        <strong>Improving speed & visibility</strong> (performance and basic SEO)
-        <span class="skill-domain"><br>/ front-end & web performance</span>
-      </li>
-      <li>
-        <strong>Languages:</strong> I’m fluent in Dutch, English, German & Czech, and speak decent Spanish too
-        <span class="skill-domain"><br>/ 🇳🇱 🇬🇧 🇩🇪 🇨🇿 🇪🇸</span>
-      </li>
-    </ul>
-
-    <p>
-      Whether it’s building a new product, stabilising an existing platform or fixing invisible technical issues —
-      I enjoy making things work, and then making them better.
-    </p>
-    <div class="contact">
-      Contact: <a href="mailto:info@dfdigital.eu">info@dfdigital.eu</a>
+      
+      <div class="case-study__tags">
+        <span>React</span>
+        <span>TypeScript</span>
+        <span>Mapbox GL JS</span>
+        <span>Leaflet</span>
+        <span>Turf.js</span>
+        <span>Performance</span>
+        <span>Caching</span>
+        <span>ExcelJS</span>
+      </div>
     </div>
   </section>
+
+  <!-- 4. TESTIMONIALS SECTION -->
+  <section class="testimonials-summary">
+    <h2>What Clients Say</h2>
+    
+    <!-- Featured Testimonial: Kevin -->
+    <div class="testimonial-featured">
+      <div class="testimonial-featured__header">
+        <img class="testimonial-featured__logo" src="/resources/images/starfeed.webp" alt="Starfeed logo" loading="lazy" decoding="async">
+        <div>
+          <strong class="testimonial-featured__name">Kevin Bruggink</strong>
+          <div class="testimonial-featured__meta">Starfeed & Red Rocket Online</div>
+        </div>
+      </div>
+      <blockquote class="testimonial-featured__quote">
+        "Danielle built our entire platform from the ground up — from database design to deployment. 
+        The system handles multiple customers reliably, integrations work smoothly, and when issues 
+        come up, they're fixed fast. Great communication and solid technical decisions throughout."
+      </blockquote>
+      <div class="testimonial-featured__tags">
+        <span>TypeScript</span>
+        <span>React</span>
+        <span>Node.js</span>
+        <span>Multi-tenant</span>
+        <span>GCP</span>
+      </div>
+    </div>
+    
+    <p class="testimonials-summary__intro">
+      More feedback from Fishing & Relax, Worldview Investment Management, and East Port Invest.
+    </p>
+    <a class="intake_button" href="/testimonials.html">Read All Testimonials</a>
+  </section>
+
+  <!-- 5. SERVICES SECTION -->
+  <section class="services" id="services">
+    <h2>Services</h2>
+    
+    <div class="services__grid">
+      <article class="card">
+        <h3>SaaS & Web Applications</h3>
+        <p>
+          Complete platforms from scratch: user authentication, APIs, databases, payment integration (Stripe), 
+          cloud deployment. Multi-tenant architecture, real-time features, admin dashboards.
+          <br><strong>Stack:</strong> TypeScript, React, Next.js, Node.js, PostgreSQL, Prisma
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Geospatial & Mapping</h3>
+        <p>
+          Advanced mapping features, geocoding systems, spatial analysis, custom search engines, vector tile 
+          optimization, real-time filtering, data visualization.
+          <br><strong>Stack:</strong> Mapbox GL JS, Turf.js, Leaflet, geocoding APIs
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>API Development & Integration</h3>
+        <p>
+          RESTful APIs, third-party integrations (WhatsApp, OpenAI, Stripe, Google Maps, etc.), webhooks, 
+          background jobs, concurrent data processing.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Cloud Infrastructure & DevOps</h3>
+        <p>
+          Google Cloud Platform (Cloud Run, Cloud SQL, Artifact Registry), Docker containerization, CI/CD 
+          pipelines (GitHub Actions), monitoring & alerting, SSL/TLS setup.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Performance Optimization</h3>
+        <p>
+          Performance auditing (Lighthouse/Core Web Vitals), speed optimization, code splitting, 
+          caching strategies, and accessibility improvements. Technical improvements for faster load times and better user experience.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Maintenance & Support</h3>
+        <p>
+          Ongoing feature development, bug fixes, performance optimization, security updates, production support.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 6. PRICING SECTION -->
+  <section class="pricing">
+    <h2>Pricing</h2>
+    <p class="price">
+      <strong>Hourly Rates:</strong><br>
+      Short-term projects: <strong>€110/hour</strong><br>
+      Long-term partnerships (3+ months): <strong>€85/hour</strong>
+    </p>
+    <p class="vat-note">
+      Excluding VAT. Fixed project pricing available for well-defined scope.<br>
+      Prepaid hour packages (20-40 hours) available for ongoing work.
+    </p>
+    <p class="vat-note">
+      <strong>VAT:</strong><br>
+      Czech clients (business/private): 21% VAT<br>
+      EU businesses (outside CZ): reverse charge VAT (no VAT charged, your VAT number on invoice)<br>
+      EU private clients: local VAT applied via OSS
+    </p>
+  </section>
+
+  <!-- 7. TOOLKIT/SKILLS SECTION -->
+  <section class="toolkit">
+    <h2>Toolkit</h2>
+    
+    <div class="toolkit__grid">
+      <div class="toolkit__category">
+        <h3>Frontend</h3>
+        <p>React, Next.js, TypeScript, JavaScript, Mapbox GL JS, Leaflet, Tailwind CSS</p>
+      </div>
+      
+      <div class="toolkit__category">
+        <h3>Backend</h3>
+        <p>Node.js, Express, RESTful APIs, WebSocket, background jobs</p>
+      </div>
+      
+      <div class="toolkit__category">
+        <h3>Database</h3>
+        <p>PostgreSQL, Prisma ORM, schema design, query optimization</p>
+      </div>
+      
+      <div class="toolkit__category">
+        <h3>Cloud & DevOps</h3>
+        <p>Google Cloud Platform (Cloud Run, Cloud SQL, Cloud Scheduler), Docker, GitHub Actions, 
+          monitoring & alerting</p>
+      </div>
+      
+      <div class="toolkit__category">
+        <h3>Integrations</h3>
+        <p>WhatsApp Business API, OpenAI, Stripe, Google Maps/Places API, geocoding APIs (Photon, Nominatim)</p>
+      </div>
+      
+      <div class="toolkit__category">
+        <h3>Geospatial</h3>
+        <p>Turf.js, spatial analysis, geocoding, vector tiles, polygon operations</p>
+      </div>
+      
+      <div class="toolkit__category">
+        <h3>Security</h3>
+        <p>SuperTokens, Auth0, JWT, SSL/TLS, HSTS, multi-tenancy isolation</p>
+      </div>
+      
+      <div class="toolkit__category">
+        <h3>Tools</h3>
+        <p>Git, ExcelJS, Lodash, performance profiling</p>
+      </div>
+      
+      <div class="toolkit__category">
+        <h3>Languages</h3>
+        <p>Fluent in Dutch, English, German & Czech, conversational Spanish</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FAQ SECTION -->
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>Do you offer fixed project pricing?</summary>
+      <p>Yes. For clearly defined projects I provide a fixed price. The hourly rate applies to ongoing 
+        work, maintenance, and consulting.</p>
+    </details>
+
+    <details>
+      <summary>How does VAT work for EU clients?</summary>
+      <p>For EU businesses outside the Czech Republic, I invoice without VAT under the reverse charge 
+        mechanism. Your VAT number will appear on the invoice.</p>
+    </details>
+
+    <details>
+      <summary>What is your typical turnaround time?</summary>
+      <p>Small changes within a few days; full projects depend on scope. I always provide a timeline 
+        with milestones upfront.</p>
+    </details>
+  </section>
+
+  <div class="contact">
+    Contact: <a href="mailto:info@dfdigital.eu">info@dfdigital.eu</a>
+  </div>
 </main>
 
 
@@ -189,7 +414,7 @@
   </div>
 
   <div class="footer__bottom">
-    <p>© 2025 DF Digital. All rights reserved.</p>
+    <p>© <span id="copyright-year">2025</span> DF Digital. All rights reserved.</p>
   </div>
 
   <div class="footer__legal-disclaimer">
@@ -202,7 +427,13 @@
 
 
 
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
   <!-- Scripts -->
   <script src="/resources/JS/theme_toggle.js"></script>
+  <script src="/resources/JS/main.js"></script>
 </body>
 </html>

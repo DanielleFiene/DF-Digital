@@ -25,4 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
     icon.classList.toggle("fa-sun", !isLight);
     localStorage.setItem("theme", isLight ? "light" : "dark");
   });
+
+  // Auto-update copyright year
+  const copyrightYear = document.getElementById("copyright-year");
+  if (copyrightYear) {
+    copyrightYear.textContent = new Date().getFullYear();
+  }
 });
