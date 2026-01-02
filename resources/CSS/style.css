@@ -68,20 +68,20 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--container-color2);
+  background: var(--first-color-alt);
   border-radius: 6px;
   border: 2px solid var(--container-color1);
   transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--first-color-alt);
+  background: var(--first-color);
 }
 
 /* Firefox */
-* {
+html {
   scrollbar-width: thin;
-  scrollbar-color: var(--container-color2) var(--container-color1);
+  scrollbar-color: var(--first-color-alt) var(--container-color1);
 }
 
 /* Light theme scrollbar */
@@ -91,16 +91,16 @@ body.light-theme ::-webkit-scrollbar-track {
 }
 
 body.light-theme ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #0ea5e9;
   border-color: #f1f5f9;
 }
 
 body.light-theme ::-webkit-scrollbar-thumb:hover {
-  background: #0ea5e9;
+  background: var(--first-color);
 }
 
-body.light-theme * {
-  scrollbar-color: #cbd5e1 #f1f5f9;
+body.light-theme html {
+  scrollbar-color: #0ea5e9 #f1f5f9;
 }
 
 /* Smooth page transitions */
@@ -111,12 +111,14 @@ body.light-theme * {
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-    background: linear-gradient(
+  background: linear-gradient(
     135deg,
     var(--body-color) 0%,
-    var(--container-color1) 50%,
-    var(--first-color-dark) 100%
+    var(--container-color1) 60%,
+    var(--container-color1) 100%
   );
+  background-attachment: fixed;
+  min-height: 100vh;
   color: var(--text-color);
   width: 100%;
   overflow-x: hidden;
@@ -1125,6 +1127,12 @@ body.light-theme .tcard--link:hover {
   .tcard__logo{ height:18px; }
 }
 
+/* Red Rocket logo invert in light theme only */
+body.light-theme .tcard__logo[src*="red rocket"],
+body.light-theme .tcard__logo[alt*="Red Rocket"] {
+  filter: invert(100%) hue-rotate(182deg) saturate(600%) contrast(200%) brightness(96%);
+}
+
 /* Light theme varianten */
 body.light-theme .tcard{
   background: #f1f5f9;
@@ -1162,12 +1170,6 @@ body.light-theme .testimonials__intro {
   color: #1e293b;
 }
 
-body.light-theme .tcard__logo_kevin {
-  filter: invert(100%) hue-rotate(182deg) saturate(600%) contrast(200%) brightness(96%);
-  border-bottom: 1px solid grey;
-  border-radius: 7px;
-
-}
 
 
 /*=============== CONTACT ===============*/
