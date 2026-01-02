@@ -1,0 +1,84 @@
+INVOICE
+
+Invoice Number: [INVOICE-NUMBER]
+Invoice Date: [DATE]
+Due Date: [DATE] (Net 15)
+
+FROM:
+
+2. Brabant CZ, spol. s r.o., trading as DF Digital
+Křinice 133, 550 01 Křinice, Czech Republic
+IČO: 25976184
+VAT number (DIČ): CZ25976184
+Email: info@dfdigital.eu
+Phone: +420 601 387 904
+
+TO:
+
+[CLIENT COMPANY NAME]
+[CLIENT ADDRESS]
+[CLIENT VAT NUMBER] (if applicable)
+
+BILLING DETAILS:
+
+Project/Reference: [PROJECT NAME OR REFERENCE]
+Period: [DATE RANGE OR MILESTONE]
+
+DESCRIPTION OF SERVICES:
+
+[DESCRIBE SERVICES PROVIDED]
+Example: "Full-stack development services - [MONTH YEAR]"
+         "2 days per week commitment (16 hours/week)"
+
+ITEMIZED CHARGES:
+
+[OPTION 1: TIME AND MATERIALS - MONTHLY INVOICE]
+Period: [MONTH YEAR]
+Description: [DESCRIPTION, e.g., "Full-stack development services"]
+Hours Worked: [ACTUAL HOURS] hours
+Rate: €[RATE]/hour
+                                                              -----------
+                                                              Subtotal: €[AMOUNT]
+
+[OPTION 2: TIME AND MATERIALS - DETAILED]
+Date        Description                    Hours    Rate        Amount
+[DATE]      [DESCRIPTION]                  [HRS]    €[RATE]     €[AMOUNT]
+[DATE]      [DESCRIPTION]                  [HRS]    €[RATE]     €[AMOUNT]
+                                                              -----------
+                                                              Subtotal: €[AMOUNT]
+
+[OPTION 2: FIXED PRICE]
+Description: [DESCRIPTION]
+Amount: €[AMOUNT]
+
+[OPTION 3: MILESTONE]
+Milestone: [MILESTONE NAME]
+Amount: €[AMOUNT]
+
+PAYMENT SUMMARY:
+
+Subtotal:                                                      €[AMOUNT]
+VAT (21% / Reverse Charge / No VAT):                          €[AMOUNT] / Reverse Charge / No VAT
+                                                              -----------
+TOTAL DUE:                                                     €[AMOUNT]
+
+PAYMENT TERMS:
+
+Payment is due within 15 days of invoice date (Net 15).
+Late payments will incur interest at the statutory rate (currently 11.50% per annum) plus a €40 late payment fee.
+
+BANK DETAILS:
+
+Bank: [BANK NAME]
+Account Name: 2. Brabant CZ, spol. s r.o.
+Account Number: [ACCOUNT NUMBER]
+IBAN: [IBAN]
+SWIFT/BIC: [SWIFT/BIC]
+
+Please include invoice number [INVOICE-NUMBER] in your payment reference.
+
+Thank you for your business!
+
+DF Digital
+info@dfdigital.eu
+

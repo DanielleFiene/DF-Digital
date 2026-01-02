@@ -1,0 +1,130 @@
+PROJECT AGREEMENT
+
+This Project Agreement ("Agreement") is entered into on [DATE] between:
+
+2. Brabant CZ, spol. s r.o., trading as DF Digital
+Křinice 133, 550 01 Křinice, Czech Republic
+IČO: 25976184
+VAT number (DIČ): CZ25976184
+Email: info@dfdigital.eu
+Phone: +420 601 387 904
+(hereinafter referred to as "DF Digital" or "Provider")
+
+AND
+
+[CLIENT COMPANY NAME]
+[CLIENT ADDRESS]
+[CLIENT VAT NUMBER] (if applicable)
+Email: [CLIENT EMAIL]
+Phone: [CLIENT PHONE]
+(hereinafter referred to as "Client")
+
+RECITALS
+
+WHEREAS, DF Digital is engaged in the business of providing software development, consulting, and related digital services;
+
+WHEREAS, Client desires to engage DF Digital to provide certain services as described herein;
+
+NOW, THEREFORE, in consideration of the mutual covenants and agreements contained herein, the parties agree as follows:
+
+1. PROJECT SCOPE
+
+1.1 Services
+DF Digital agrees to provide the following services (the "Services"):
+[DESCRIBE SERVICES IN DETAIL]
+Example: "Full-stack development services, [X] days per week ([X] hours per week), for a period of [X] months"
+Note: Specify days/hours per WEEK (not per month) for clarity, as months have varying numbers of days.
+
+1.2 Deliverables
+The following deliverables are included in this Agreement:
+[LIST ALL DELIVERABLES]
+Example: "Development of [PROJECT NAME], including frontend, backend, and database components"
+
+1.3 Timeline
+- Project Start Date: [DATE]
+- Estimated Completion Date: [DATE]
+- Working Schedule: [DESCRIBE, e.g., "2 days per week (16 hours per week), typically Mondays and Wednesdays"]
+- Total Estimated Hours: [CALCULATE: hours per week × number of weeks]
+- Key Milestones:
+  [LIST MILESTONES WITH DATES]
+
+1.4 Holidays, Vacation, and Time Off
+- DF Digital will notify Client in advance of planned vacation or time off (minimum 2 weeks notice, or as soon as reasonably possible)
+- Czech public holidays will be observed (DF Digital is not required to work on these days). A list of Czech public holidays is available upon request or can be found at https://www.mzv.cz/
+- Time off for holidays and vacation: Hours will be made up in subsequent weeks, or the weekly commitment will be adjusted by mutual agreement. If hours cannot be made up, they will be deducted from the monthly invoice.
+- In case of illness or emergency, DF Digital will notify Client as soon as reasonably possible. Hours lost due to illness will not be charged to the Client.
+- DF Digital maintains flexibility in working hours and may adjust the weekly schedule with Client's agreement, provided the weekly commitment is met
+
+2. COMPENSATION
+
+2.1 Payment Structure
+[ ] Fixed Price: €[AMOUNT]
+[ ] Time and Materials: €[RATE]/hour
+  - Hourly Rate: €[RATE]/hour (short-term: €110/hour, long-term 3+ months: €85/hour)
+  - Commitment: [X] hours per week
+  - Estimated Total Hours: [CALCULATE: hours per week × number of weeks]
+  - Estimated Total: €[AMOUNT] (based on estimated hours, actual may vary)
+[ ] Hybrid: [DESCRIBE]
+
+2.2 Payment Schedule
+[ ] 50% upon signing, 50% upon completion
+[ ] Monthly invoicing (recommended for ongoing work)
+  - Invoice will be based on actual hours worked in that calendar month
+  - Example: If working 2 days/week (16 hours/week), monthly hours will vary:
+    * 4-week month: ~64 hours
+    * 5-week month: ~80 hours
+[ ] Milestone-based payments:
+  [LIST MILESTONES AND PAYMENT AMOUNTS]
+
+2.3 Payment Terms
+Payment is due within 15 days of invoice date (Net 15). Late payments will incur interest as specified in DF Digital's Terms & Conditions.
+
+3. INTELLECTUAL PROPERTY
+
+3.1 Upon full payment, Client receives a non-exclusive, perpetual license to use the Deliverables for their business purposes as specified in this Agreement.
+
+3.2 Ownership of Deliverables remains with DF Digital until full payment is received.
+
+3.3 DF Digital retains all rights to pre-existing code, libraries, frameworks, and tools.
+
+4. WARRANTIES AND LIABILITY
+
+4.1 DF Digital warrants that Services will be performed with professional skill and care.
+
+4.2 Warranty period: 12 months from acceptance of Deliverables.
+
+4.3 Liability is limited to the amount paid by Client for the specific Services giving rise to the claim in the 12 months preceding the claim.
+
+5. TERM AND TERMINATION
+
+5.1 This Agreement shall commence on [DATE] and continue until completion of Services, unless earlier terminated.
+
+5.2 Either party may terminate with 30 days written notice.
+
+5.3 Upon termination, Client shall pay for Services rendered up to the termination date.
+
+6. CONFIDENTIALITY
+
+Both parties agree to maintain confidentiality of all non-public information disclosed during the course of this Agreement.
+
+7. GENERAL PROVISIONS
+
+7.1 This Agreement is subject to DF Digital's Terms & Conditions, which are incorporated by reference and available at https://www.dfdigital.eu/terms.html
+
+7.2 This Agreement is governed by the laws of the Czech Republic.
+
+7.3 Any disputes shall be subject to the exclusive jurisdiction of the competent courts of the Czech Republic (Náchod District Court or Hradec Králové Regional Court, as applicable).
+
+7.4 This Agreement may only be modified in writing and signed by both parties.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first written above.
+
+DF DIGITAL                          CLIENT
+
+_________________________           _________________________
+Danielle Fiene                      [CLIENT NAME]
+2. Brabant CZ, spol. s r.o.        [CLIENT TITLE]
+                                    [CLIENT COMPANY]
+
+Date: _______________               Date: _______________
+

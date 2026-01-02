@@ -1,0 +1,119 @@
+QUOTATION / PROJECT PROPOSAL
+
+Quotation Number: [QUOTE-NUMBER]
+Date: [DATE]
+Valid Until: [DATE] (typically 30 days)
+
+FROM:
+
+2. Brabant CZ, spol. s r.o., trading as DF Digital
+Křinice 133, 550 01 Křinice, Czech Republic
+IČO: 25976184
+VAT number (DIČ): CZ25976184
+Email: info@dfdigital.eu
+Phone: +420 601 387 904
+
+TO:
+
+[CLIENT COMPANY NAME]
+[CLIENT ADDRESS]
+Contact Person: [NAME]
+
+1. PROJECT SUMMARY
+
+Project Name: [PROJECT NAME]
+Project Description: [BRIEF DESCRIPTION]
+
+2. SCOPE OF WORK
+
+2.1 Included Services
+[LIST ALL SERVICES INCLUDED IN THIS QUOTATION]
+
+2.2 Deliverables
+[LIST ALL DELIVERABLES]
+
+2.3 Exclusions
+[LIST WHAT IS NOT INCLUDED]
+
+3. TIMELINE
+
+Estimated Start Date: [DATE]
+Estimated Completion Date: [DATE]
+Duration: [NUMBER] weeks/months
+
+Key Milestones:
+[LIST MILESTONES]
+
+4. PRICING
+
+4.1 Pricing Structure
+[ ] Fixed Price: €[AMOUNT]
+[ ] Time and Materials: €[RATE]/hour
+  - Hourly Rate: €[RATE]/hour
+  - Commitment: [X] hours per week (NOT per month - months vary in length)
+  - Estimated Duration: [X] weeks/months
+  - Estimated Total Hours: [CALCULATE: hours per week × number of weeks]
+  - Estimated Total: €[ESTIMATED AMOUNT] (based on estimated hours, actual may vary)
+[ ] Hybrid: [DESCRIBE]
+
+4.2 Payment Terms
+[DESCRIBE PAYMENT SCHEDULE]
+Example: "Monthly invoicing based on actual hours worked. Hours per month will vary:
+  - 4-week month: approximately [X] hours
+  - 5-week month: approximately [X] hours
+  - Actual hours worked will be invoiced."
+
+4.3 Pricing Breakdown
+[OPTIONAL: BREAKDOWN OF COSTS]
+
+5. ASSUMPTIONS AND DEPENDENCIES
+
+5.1 Assumptions
+[LIST ASSUMPTIONS]
+
+5.2 Dependencies
+[LIST DEPENDENCIES ON CLIENT]
+
+6. TERMS AND CONDITIONS
+
+6.1 This quotation is subject to DF Digital's Terms & Conditions, available at https://www.dfdigital.eu/terms.html
+
+6.2 This quotation is valid until [DATE]
+
+6.3 Acceptance of this quotation constitutes acceptance of DF Digital's Terms & Conditions
+
+6.4 Any changes to scope will be documented in a Change Order and may affect timeline and pricing
+
+7. NEXT STEPS
+
+To proceed with this project:
+1. Review and approve this quotation
+2. Sign the Project Agreement (to be provided upon acceptance)
+3. Return signed documents to info@dfdigital.eu
+
+8. CONTACT
+
+For questions or to accept this quotation, please contact:
+Email: info@dfdigital.eu
+Phone: +420 601 387 904
+
+We look forward to working with you!
+
+Best regards,
+
+Danielle Fiene
+DF Digital
+
+ACCEPTANCE:
+
+By signing below, Client accepts this quotation and agrees to the terms and conditions set forth herein.
+
+CLIENT
+
+_________________________
+[CLIENT NAME]
+[CLIENT TITLE]
+[CLIENT COMPANY]
+
+Date: _______________
+
