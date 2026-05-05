@@ -62,7 +62,7 @@
   <section class="services container" id="services">
     <h1>Services</h1>
     <p class="services__intro">
-        I create fast, reliable and user-friendly digital products — from complete SaaS platforms to custom web applications — with a focus on performance, security, and real-world results.
+        Infrastructure, cloud and full-stack development — automated pipelines, Kubernetes, and complete SaaS platforms from database to UI.
     </p>
 
     <div class="services__grid">
@@ -95,8 +95,18 @@
       <article class="card">
         <h3>Cloud Infrastructure & DevOps</h3>
         <p>
-          Google Cloud Platform (Cloud Run, Cloud SQL, Artifact Registry), Docker containerization, CI/CD 
-          pipelines (GitHub Actions), monitoring & alerting, SSL/TLS setup.
+          Infrastructure & DevOps as a core focus: Docker containerization, CI/CD pipelines (GitHub Actions),
+          secrets management, environment separation, monitoring & alerting, and SSL/TLS.
+          <br><strong>Cloud:</strong> Azure (App Service, Container Registry/ACR, AKS) and Google Cloud Platform (Cloud Run, Cloud SQL).
+        </p>
+      </article>
+      
+      <article class="card">
+        <h3>Azure, Kubernetes & AKS</h3>
+        <p>
+          Kubernetes platform work on Azure: AKS cluster setup and operations, Helm-based deployments,
+          ingress (NGINX), TLS with cert-manager, container registries (ACR), and GitHub Actions automation.
+          Includes observability (Prometheus/Grafana) and production-ready deployment practices.
         </p>
       </article>
 
@@ -116,6 +126,225 @@
         </p>
       </article>
     </div>
+    
+    <!-- Case Studies -->
+    <section class="case-studies">
+      <h2>Recent Projects</h2>
+      
+      <!-- WORLDVIEW -->
+      <div class="case-study">
+        <h3>Cloud & DevOps Engineer — WorldView (Investment Management Platform)</h3>
+        <p class="case-study__tagline">Full infrastructure, release pipeline and admin tooling for a financial modeling platform on Azure</p>
+        
+        <p class="case-study__description">
+          Replaced a manual deployment process with a fully automated cloud pipeline for a financial data platform running on Azure.
+        </p>
+        
+        <div class="case-study__details">
+          <p><strong>Role:</strong> Cloud & DevOps Engineer</p>
+          <p><strong>Timeline:</strong> February 2026 – Present · Remote / Part-time</p>
+          <p><strong>Status:</strong> Active</p>
+        </div>
+        
+        <p><strong>What I built:</strong></p>
+        <ul>
+          <li>Designed and built a release artifact system (per-key Parquet files, SHA-256 checksums, manifest contract) replacing unsafe pickle-based data loading</li>
+          <li>Full Azure infrastructure via Terraform: App Services, Azure SQL, Container Registry, Key Vault, Managed Identity, RBAC — all reproducible from scratch</li>
+          <li>CI/CD pipeline with GitHub Actions: validate → build → deploy → verify, blocking on test gates</li>
+          <li>Draft system with pessimistic locking (atomic SQL, 30-minute fallback timeout) — prevents concurrent edits to financial parameters</li>
+          <li>Automatic release switching via Azure Management API: publish triggers runtime restart, health check polling, automatic rollback on failure</li>
+          <li>Admin UI for non-technical users: draft workflow, diff view before publish, audit log, release history with one-click rollback</li>
+          <li>OAuth2 client credentials infrastructure for machine-to-machine API access (banks, external partners)</li>
+        </ul>
+        
+        <p class="case-study__note">
+          <em>Code is proprietary and under NDA. Technical details available on request.</em>
+        </p>
+        
+        <div class="case-study__tags">
+          <span>Django</span>
+          <span>React</span>
+          <span>TypeScript</span>
+          <span>Docker</span>
+          <span>Azure</span>
+          <span>Terraform</span>
+          <span>GitHub Actions</span>
+          <span>PostgreSQL</span>
+          <span>CI/CD</span>
+          <span>Python</span>
+        </div>
+      </div>
+      
+      <!-- KLEINE KONING -->
+      <div class="case-study">
+        <h3>Kleine Koning — Time Tracking SaaS</h3>
+        <p class="case-study__tagline">Own SaaS product for freelance time tracking, live at kleinekoning.eu</p>
+        
+        <p class="case-study__description">
+          Full-stack SaaS application built and deployed for personal use and external users.
+        </p>
+        
+        <div class="case-study__details">
+          <p><strong>Role:</strong> Sole developer</p>
+          <p><strong>Timeline:</strong> February 2026 – Present</p>
+          <p><strong>Status:</strong> Live in production</p>
+        </div>
+        
+        <p><strong>What I built:</strong></p>
+        <ul>
+          <li>Weekly time tracking with cross-tab timer sync via BroadcastChannel API</li>
+          <li>Client and project management with revenue overview by period</li>
+          <li>Timesheet export as PDF and CSV</li>
+          <li>PDF generation in a separate Cloudflare Worker to keep the Next.js bundle lean</li>
+          <li>Magic Link authentication and Row Level Security via Supabase for complete data isolation per user</li>
+          <li>Edge-compatible API routes throughout (Next.js App Router, Edge Runtime)</li>
+          <li>Deployed on Cloudflare Pages with zero cold starts</li>
+        </ul>
+        
+        <p class="case-study__note">
+          <em>Live at <a href="https://kleinekoning.eu" target="_blank" rel="noopener noreferrer">kleinekoning.eu</a> — built for real use, not just as a portfolio project.</em>
+        </p>
+        
+        <div class="case-study__tags">
+          <span>Next.js</span>
+          <span>TypeScript</span>
+          <span>Supabase</span>
+          <span>PostgreSQL</span>
+          <span>Cloudflare Pages</span>
+          <span>Cloudflare Workers</span>
+          <span>Edge Runtime</span>
+        </div>
+      </div>
+      
+      <!-- AKS DEVOPS PLATFORM -->
+      <div class="case-study">
+        <h3>AKS DevOps Platform</h3>
+        <p class="case-study__tagline">Kubernetes platform on Azure (AKS) — portfolio and skills development</p>
+        
+        <p class="case-study__description">
+          Fully automated AKS cluster built to demonstrate production-grade Kubernetes and observability practices.
+        </p>
+        
+        <div class="case-study__details">
+          <p><strong>Role:</strong> Solo engineer</p>
+          <p><strong>Timeline:</strong> April 2026</p>
+          <p><strong>Status:</strong> Live — <a href="https://github.com/DanielleFiene/aks-platform" target="_blank" rel="noopener noreferrer">github.com/DanielleFiene/aks-platform</a></p>
+        </div>
+        
+        <p><strong>What I built:</strong></p>
+        <ul>
+          <li>Modular Terraform infrastructure for AKS cluster on Azure</li>
+          <li>Custom Node.js uptime monitoring service tracking live production endpoints (Worldview, Starfeed) every 60 seconds, results stored in PostgreSQL</li>
+          <li>Full observability stack: Prometheus metrics collection, Grafana dashboards</li>
+          <li>Zero-touch deployments via GitHub Actions CI/CD pipeline — no manual steps after code push</li>
+          <li>NGINX Ingress with cert-manager for SSL/TLS termination</li>
+        </ul>
+        
+        <div class="case-study__tags">
+          <span>AKS</span>
+          <span>Kubernetes</span>
+          <span>Terraform</span>
+          <span>Helm</span>
+          <span>Prometheus</span>
+          <span>Grafana</span>
+          <span>GitHub Actions</span>
+          <span>Docker</span>
+          <span>Node.js</span>
+          <span>Azure</span>
+        </div>
+      </div>
+      
+      <!-- STARFEED -->
+      <div class="case-study">
+        <h3>Starfeed</h3>
+        <p class="case-study__tagline">Multi-tenant SaaS platform for restaurant review collection</p>
+        
+        <p class="case-study__description">
+          Production platform used across 20+ restaurant locations. 
+          Customers scan QR codes → WhatsApp conversational flow → AI-powered analysis → 
+          actionable insights in admin dashboard.
+        </p>
+        
+        <div class="case-study__details">
+          <p><strong>Role:</strong> Sole developer (architecture, backend, frontend, DevOps, operations)</p>
+          <p><strong>Timeline:</strong> August 2024 - March 2026</p>
+          <p><strong>Status:</strong> Delivered</p>
+        </div>
+        
+        <p><strong>Technical highlights:</strong></p>
+        <ul>
+          <li>Multi-tenant architecture with complete data isolation, role-based access and tenant isolation</li>
+          <li>Next.js + TypeScript frontend, Node.js + Express backend; SuperTokens as dedicated auth service on Cloud Run</li>
+          <li>Two separate PostgreSQL databases (application + authentication) on Cloud SQL; private VPC only, no public DB access</li>
+          <li>Google Cloud Platform (Cloud Run, Cloud SQL, Cloud Scheduler); Secret Manager for all secrets — none in code or images</li>
+          <li>CI/CD with GitHub Actions; Docker containerization for all services</li>
+          <li>Integrations: WhatsApp Business API (360Dialog), OpenAI, Stripe, Mailgun, Google Places API</li>
+          <li>Security: CSRF protection, tiered rate limiting, webhook signature verification; Elasticsearch (single-node, private VM) for search</li>
+          <li>Health monitoring with Slack alerts; error tracking with Sentry; SSL/TLS, security headers, CORS</li>
+        </ul>
+        
+        <p class="case-study__note">
+          <em>Code is proprietary and under NDA. Technical details available on request.</em>
+        </p>
+        
+        <div class="case-study__tags">
+          <span>Next.js</span>
+          <span>React</span>
+          <span>TypeScript</span>
+          <span>Node.js</span>
+          <span>PostgreSQL</span>
+          <span>Prisma</span>
+          <span>GCP</span>
+          <span>Docker</span>
+          <span>SuperTokens</span>
+          <span>Elasticsearch</span>
+          <span>Multi-tenant</span>
+        </div>
+      </div>
+      
+      <!-- DOKDATA -->
+      <div class="case-study">
+        <h3>DokData - Geospatial Search & Analysis Features</h3>
+        <p class="case-study__tagline">Frontend development for traffic analytics platform</p>
+        
+        <p class="case-study__description">
+          Built advanced search, filtering, and data visualization components for a geospatial 
+          web application used for road safety analysis across Europe.
+        </p>
+        
+        <div class="case-study__details">
+          <p><strong>Role:</strong> Frontend Developer (freelance)</p>
+          <p><strong>Timeline:</strong> May 2024 - February 2025</p>
+          <p><strong>Tech:</strong> React, TypeScript, Mapbox GL JS, Leaflet, Turf.js</p>
+        </div>
+        
+        <p><strong>What I built:</strong></p>
+        <ul>
+          <li><strong>Smart geocoding search:</strong> Address/street/highway search across Europe with intelligent API routing (Photon for addresses, Nominatim for highways). Handles 18+ European languages with street name normalization, diacritic folding, and multiple postcode formats. Multi-tier caching (localStorage + in-memory with TTL) for improved performance.</li>
+          
+          <li><strong>Street View optimization:</strong> Solved a performance issue where the previous implementation loaded all 100 Street View images immediately when the top 100 table was displayed. Implemented lazy-loading pattern where images only load when the user clicks the dropdown, reducing initial API calls from 100+ to zero. Each image loads on-demand with a single API call per request, significantly improving page load performance and reducing API costs.</li>
+          
+          <li><strong>Advanced Excel export:</strong> Built export system that generates spreadsheets with embedded Street View images (parallel loading with 4 concurrent requests, base64 conversion), map screenshots, calculated risk scores, and dynamic formulas using ExcelJS.</li>
+          
+          <li><strong>Map style switching:</strong> Implemented basemap selector that preserves custom data layers when switching between street/satellite/dark modes, with dynamic color adaptation for optimal visibility.</li>
+        </ul>
+        
+        <p class="case-study__note">
+          <em>Code is proprietary and under NDA. Technical details available on request.</em>
+        </p>
+        
+        <div class="case-study__tags">
+          <span>React</span>
+          <span>TypeScript</span>
+          <span>Mapbox GL JS</span>
+          <span>Leaflet</span>
+          <span>Turf.js</span>
+          <span>Performance</span>
+          <span>Caching</span>
+          <span>ExcelJS</span>
+        </div>
+      </div>
+    </section>
 
     <div class="pricing">
       <h2>Pricing</h2>
@@ -157,6 +386,21 @@
         <summary>What is your typical turnaround time?</summary>
         <p>Small changes within a few days; full projects depend on scope. 
           <br>I always provide a timeline with milestones upfront.</p>
+        </details>
+        
+        <details>
+        <summary>Do you work with existing codebases?</summary>
+        <p>Yes. WorldView and DokData were both existing projects. I can audit, refactor, extend, or take over maintenance of existing systems.</p>
+        </details>
+        
+        <details>
+        <summary>What cloud platforms do you work with?</summary>
+        <p>Azure and Google Cloud Platform, both in production. Azure for WorldView (App Service, SQL, Key Vault, Container Registry), GCP for Starfeed (Cloud Run, Cloud SQL, Cloud Scheduler).</p>
+        </details>
+        
+        <details>
+        <summary>Do you also do Kubernetes?</summary>
+        <p>Yes. I built an AKS cluster with Terraform, Prometheus, Grafana and automated CI/CD as a portfolio project. See the AKS DevOps Platform case study above.</p>
         </details>
     </div>
 
@@ -209,7 +453,7 @@
   </div>
 
   <div class="footer__bottom">
-    <p>© <span id="copyright-year">2025</span> DF Digital. All rights reserved.</p>
+    <p>© <span id="copyright-year">2026</span> DF Digital. All rights reserved.</p>
   </div>
 
   <div class="footer__legal-disclaimer">

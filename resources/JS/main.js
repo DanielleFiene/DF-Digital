@@ -1,5 +1,10 @@
 // Back to Top Button
 document.addEventListener("DOMContentLoaded", function () {
+  const copyrightYear = document.getElementById("copyright-year");
+  if (copyrightYear) {
+    copyrightYear.textContent = String(new Date().getFullYear());
+  }
+
   const backToTopButton = document.getElementById("back-to-top");
   
   if (backToTopButton) {
