@@ -62,10 +62,10 @@
 <main class="main">
   <!-- 1. HERO SECTION -->
   <section class="hero">
-    <h1>Infrastructure & Cloud Engineering</h1>
-    <p class="hero__subtitle">Building things that simply work.</p>
+    <h1>Cloud Infrastructure & Full-Stack Platforms</h1>
+    <p class="hero__subtitle">Secure Azure and GCP systems that ship.</p>
     <p class="hero__description">
-      From deployment pipelines and containerization to full-stack when the project needs it
+      I build production platforms where infrastructure, application code, identity, deployment and governance have to work together.
     </p>
   </section>
 
@@ -73,15 +73,15 @@
   <section class="intro">
     <h2>About</h2>
     <p>
-      I'm <strong>Danielle Fiene</strong> — an engineer focused on <strong>infrastructure, cloud and DevOps</strong>: automated deployment pipelines, containerization, and making systems reliable and repeatable.<br>
-      I also build full-stack applications when the project needs it — from database to UI.
+      I'm <strong>Danielle Fiene</strong> — an engineer focused on <strong>infrastructure, cloud and DevOps</strong>: Terraform, automated deployment pipelines, containerization, identity, monitoring, and making systems reliable and repeatable.<br>
+      I also build full-stack applications when the project needs it — from database and APIs to admin workflows and UI.
     </p>
     <p>
       Recent work includes <strong>WorldView</strong> (investment management platform on Azure — full infrastructure, CI/CD, release pipeline, and admin tooling), <strong>Starfeed</strong> (multi-tenant SaaS on GCP, delivered and used by real businesses), <strong>Kleine Koning</strong> (own time tracking SaaS on Cloudflare), and geospatial features for a European traffic analytics platform.
     </p>
     <p>
-      <strong>Tech stack:</strong> Azure, Google Cloud Platform, Docker, GitHub Actions, CI/CD; plus TypeScript, React, Next.js, Node.js, PostgreSQL, Prisma when building applications. 
-      I handle environment separation, secrets management, monitoring, security, and reliability.
+      <strong>Tech stack:</strong> Azure, Google Cloud Platform, Terraform, Docker, GitHub Actions, CI/CD; plus Django, DRF, TypeScript, React, Next.js, Node.js, PostgreSQL and Azure SQL when building applications. 
+      I handle environment separation, secrets management, RBAC, managed identity, monitoring, security, and reliability.
     </p>
     <p>
       Originally from the Netherlands, I work with teams across Europe — remote or hybrid — to build 
@@ -95,11 +95,11 @@
     
     <!-- WORLDVIEW -->
     <div class="case-study">
-      <h3>Cloud & DevOps Engineer — WorldView (Investment Management Platform)</h3>
-      <p class="case-study__tagline">Full infrastructure, release pipeline and admin tooling for a financial modeling platform on Azure</p>
+      <h3>Azure Cloud & Full-Stack Engineer — WorldView (Investment Management Platform)</h3>
+      <p class="case-study__tagline">Secure Azure infrastructure, release governance and admin tooling for a financial modeling platform</p>
       
       <p class="case-study__description">
-        Replaced a manual deployment process with a fully automated cloud pipeline for a financial data platform running on Azure.
+        Built a production Azure platform for a financial-sector application, replacing manual deployment and risky data loading with reproducible infrastructure, secure identity, automated releases and audit-ready governance.
       </p>
       
       <div class="case-study__details">
@@ -110,12 +110,13 @@
       
       <p><strong>What I built:</strong></p>
       <ul>
-        <li>Designed and built a release artifact system (per-key Parquet files, SHA-256 checksums, manifest contract) replacing unsafe pickle-based data loading</li>
-        <li>Full Azure infrastructure via Terraform: App Services, Azure SQL, Container Registry, Key Vault, Managed Identity, RBAC — all reproducible from scratch</li>
-        <li>CI/CD pipeline with GitHub Actions: validate → build → deploy → verify, blocking on test gates</li>
-        <li>Draft system with pessimistic locking (atomic SQL, 30-minute fallback timeout) — prevents concurrent edits to financial parameters</li>
-        <li>Automatic release switching via Azure Management API: publish triggers runtime restart, health check polling, automatic rollback on failure</li>
-        <li>Admin UI for non-technical users: draft workflow, diff view before publish, audit log, release history with one-click rollback</li>
+        <li>Full Azure infrastructure via Terraform: App Services, Azure SQL, Container Registry, Key Vault, Managed Identity, RBAC, Application Insights and Log Analytics — reproducible from scratch</li>
+        <li>Zero-static-secret CI/CD with GitHub Actions and OIDC federation: build, push to ACR, deploy to App Service and verify release health</li>
+        <li>Entra ID EasyAuth SSO for user access and managed identity token injection for runtime database and blob access</li>
+        <li>Designed and built a release artifact system with per-key Parquet files, SHA-256 checksums and a manifest contract, replacing unsafe pickle-based data loading</li>
+        <li>Draft, lock, diff, publish and rollback workflow for financial parameters, with pessimistic locking and audit trails for governance</li>
+        <li>Automatic release switching via Azure Management API: publish triggers runtime restart, health check polling and automatic rollback on failure</li>
+        <li>Admin UI for non-technical users: draft workflow, diff view before publish, audit log, release history and one-click rollback</li>
         <li>OAuth2 client credentials infrastructure for machine-to-machine API access (banks, external partners)</li>
       </ul>
       
@@ -131,9 +132,11 @@
         <span>Azure</span>
         <span>Terraform</span>
         <span>GitHub Actions</span>
-        <span>PostgreSQL</span>
+        <span>Azure SQL</span>
         <span>CI/CD</span>
         <span>Python</span>
+        <span>EasyAuth</span>
+        <span>Managed Identity</span>
       </div>
     </div>
     
@@ -350,8 +353,8 @@
         <h3>Cloud Infrastructure & DevOps</h3>
         <p>
           Automated deployment pipelines, containerization (Docker), CI/CD with GitHub Actions. 
-          Azure (App Service, Container Registry) and Google Cloud Platform (Cloud Run, Cloud SQL, Artifact Registry). 
-          Environment separation, secrets management, monitoring & alerting, SSL/TLS.
+          Azure (App Service, Container Registry, Azure SQL, Key Vault, Managed Identity) and Google Cloud Platform (Cloud Run, Cloud SQL, Artifact Registry). 
+          Environment separation, secrets management, RBAC, monitoring & alerting, SSL/TLS.
         </p>
       </article>
 
@@ -441,8 +444,7 @@
     <div class="toolkit__grid">
       <div class="toolkit__category">
         <h3>Cloud & DevOps</h3>
-        <p>Azure (App Service, Container Registry), Google Cloud Platform (Cloud Run, Cloud SQL, Cloud Scheduler), 
-          Docker, GitHub Actions, CI/CD, monitoring & alerting, Kubernetes (AKS), Helm, Prometheus, Grafana, Terraform</p>
+        <p>Azure, Google Cloud Platform, Terraform, Docker, GitHub Actions, OIDC federation, CI/CD, AKS, Helm, Prometheus, Grafana, Application Insights</p>
       </div>
       
       <div class="toolkit__category">
@@ -452,12 +454,12 @@
       
       <div class="toolkit__category">
         <h3>Backend</h3>
-        <p>Node.js, Express, Django, RESTful APIs, WebSocket, background jobs</p>
+        <p>Python, Django, Node.js, Express, REST APIs, authentication flows, background jobs</p>
       </div>
       
       <div class="toolkit__category">
-        <h3>Database</h3>
-        <p>PostgreSQL, Prisma ORM, schema design, query optimization</p>
+        <h3>Databases & Data</h3>
+        <p>PostgreSQL, Azure SQL, Cloud SQL, Prisma, SQL schema design, migrations, query optimization</p>
       </div>
       
       <div class="toolkit__category">
@@ -472,12 +474,12 @@
       
       <div class="toolkit__category">
         <h3>Security</h3>
-        <p>SuperTokens, Auth0, JWT, SSL/TLS, HSTS, multi-tenancy isolation</p>
+        <p>Entra ID, EasyAuth, Managed Identity, OAuth2, RBAC, Key Vault, SSL/TLS, security headers, multi-tenant isolation, audit trails</p>
       </div>
       
       <div class="toolkit__category">
         <h3>Tools</h3>
-        <p>Git, ExcelJS, Lodash, performance profiling</p>
+        <p>Git, GitHub, Docker Compose, pytest, Sentry, monitoring, debugging, performance analysis</p>
       </div>
       
       <div class="toolkit__category">

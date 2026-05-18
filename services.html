@@ -62,7 +62,7 @@
   <section class="services container" id="services">
     <h1>Services</h1>
     <p class="services__intro">
-        Infrastructure, cloud and full-stack development — automated pipelines, Kubernetes, and complete SaaS platforms from database to UI.
+        Infrastructure, cloud and full-stack development — Terraform, secure Azure/GCP platforms, automated pipelines, Kubernetes, and complete SaaS products from database to UI.
     </p>
 
     <div class="services__grid">
@@ -95,9 +95,9 @@
       <article class="card">
         <h3>Cloud Infrastructure & DevOps</h3>
         <p>
-          Infrastructure & DevOps as a core focus: Docker containerization, CI/CD pipelines (GitHub Actions),
-          secrets management, environment separation, monitoring & alerting, and SSL/TLS.
-          <br><strong>Cloud:</strong> Azure (App Service, Container Registry/ACR, AKS) and Google Cloud Platform (Cloud Run, Cloud SQL).
+          Infrastructure & DevOps as a core focus: Terraform, Docker containerization, CI/CD pipelines (GitHub Actions),
+          secrets management, environment separation, RBAC, monitoring & alerting, and SSL/TLS.
+          <br><strong>Cloud:</strong> Azure (App Service, Azure SQL, Key Vault, Managed Identity, Container Registry/ACR, AKS) and Google Cloud Platform (Cloud Run, Cloud SQL).
         </p>
       </article>
       
@@ -133,11 +133,11 @@
       
       <!-- WORLDVIEW -->
       <div class="case-study">
-        <h3>Cloud & DevOps Engineer — WorldView (Investment Management Platform)</h3>
-        <p class="case-study__tagline">Full infrastructure, release pipeline and admin tooling for a financial modeling platform on Azure</p>
+        <h3>Azure Cloud & Full-Stack Engineer — WorldView (Investment Management Platform)</h3>
+        <p class="case-study__tagline">Secure Azure infrastructure, release governance and admin tooling for a financial modeling platform</p>
         
         <p class="case-study__description">
-          Replaced a manual deployment process with a fully automated cloud pipeline for a financial data platform running on Azure.
+          Built a production Azure platform for a financial-sector application, replacing manual deployment and risky data loading with reproducible infrastructure, secure identity, automated releases and audit-ready governance.
         </p>
         
         <div class="case-study__details">
@@ -148,12 +148,13 @@
         
         <p><strong>What I built:</strong></p>
         <ul>
-          <li>Designed and built a release artifact system (per-key Parquet files, SHA-256 checksums, manifest contract) replacing unsafe pickle-based data loading</li>
-          <li>Full Azure infrastructure via Terraform: App Services, Azure SQL, Container Registry, Key Vault, Managed Identity, RBAC — all reproducible from scratch</li>
-          <li>CI/CD pipeline with GitHub Actions: validate → build → deploy → verify, blocking on test gates</li>
-          <li>Draft system with pessimistic locking (atomic SQL, 30-minute fallback timeout) — prevents concurrent edits to financial parameters</li>
-          <li>Automatic release switching via Azure Management API: publish triggers runtime restart, health check polling, automatic rollback on failure</li>
-          <li>Admin UI for non-technical users: draft workflow, diff view before publish, audit log, release history with one-click rollback</li>
+          <li>Full Azure infrastructure via Terraform: App Services, Azure SQL, Container Registry, Key Vault, Managed Identity, RBAC, Application Insights and Log Analytics — reproducible from scratch</li>
+          <li>Zero-static-secret CI/CD with GitHub Actions and OIDC federation: build, push to ACR, deploy to App Service and verify release health</li>
+          <li>Entra ID EasyAuth SSO for user access and managed identity token injection for runtime database and blob access</li>
+          <li>Designed and built a release artifact system with per-key Parquet files, SHA-256 checksums and a manifest contract, replacing unsafe pickle-based data loading</li>
+          <li>Draft, lock, diff, publish and rollback workflow for financial parameters, with pessimistic locking and audit trails for governance</li>
+          <li>Automatic release switching via Azure Management API: publish triggers runtime restart, health check polling and automatic rollback on failure</li>
+          <li>Admin UI for non-technical users: draft workflow, diff view before publish, audit log, release history and one-click rollback</li>
           <li>OAuth2 client credentials infrastructure for machine-to-machine API access (banks, external partners)</li>
         </ul>
         
@@ -169,9 +170,11 @@
           <span>Azure</span>
           <span>Terraform</span>
           <span>GitHub Actions</span>
-          <span>PostgreSQL</span>
+          <span>Azure SQL</span>
           <span>CI/CD</span>
           <span>Python</span>
+          <span>EasyAuth</span>
+          <span>Managed Identity</span>
         </div>
       </div>
       
