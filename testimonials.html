@@ -22,6 +22,7 @@
 
   <link href="/resources/CSS/normalize.css" rel="stylesheet" />
   <link href="/resources/CSS/style.css" rel="stylesheet" />
+  <link href="/resources/CSS/df-theme.css" rel="stylesheet" />
   <link href="/resources/CSS/cookie-consent.css" rel="stylesheet" />
   <script defer src="https://kit.fontawesome.com/56e9e1144f.js" crossorigin="anonymous"></script>
   <title>DF Digital | Testimonials</title>
@@ -29,16 +30,23 @@
 <body>
   <header class="header">
     <nav class="nav">
-      <a href="/" class="logo">
-        <img src="/resources/images/logo/Logo_blue.png" alt="DF Digital logo" />
+      <a href="/" class="logo" aria-label="DF Digital — home">
+        <img
+          class="logo__img"
+          src="/resources/images/logo/Logo_blue.png"
+          alt=""
+          width="240"
+          height="52"
+          decoding="async"
+        />
       </a>
       <ul id="nav-menu">
         <li><a href="/">Home</a></li>
         <li><a href="/testimonials.html" aria-current="page">Testimonials</a></li>
         <li><a href="/services.html">Services</a></li>
-        <li><a href="/contact.html">Contact</a></li>
       </ul>
       <div class="nav__actions">
+        <a href="/contact.html" class="nav__cta">Contact</a>
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark mode">
           <i class="fa-solid fa-moon"></i>
         </button>
