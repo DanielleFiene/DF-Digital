@@ -53,6 +53,7 @@
         <li><a href="/" aria-current="page">Home</a></li>
         <li><a href="/testimonials.html">Testimonials</a></li>
         <li><a href="/services.html">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
       </ul>
       <div class="nav__actions">
         <a href="/contact.html" class="nav__cta">Contact</a>
@@ -85,7 +86,7 @@
       I take projects from database and APIs to user interface, cloud infrastructure and deployment pipelines, with a focus on reliability, security and clear, usable workflows.
     </p>
     <p>
-      Recent work includes <strong>WorldView</strong>, a financial-sector platform on Azure with Terraform, CI/CD, Entra ID SSO and audit-ready release workflows; <strong>Starfeed</strong>, a multi-tenant SaaS platform on GCP used across 20+ restaurant locations; <strong>Kleine Koning</strong>, my own time tracking SaaS; and geospatial features for a European traffic analytics platform.
+      Recent work includes <strong>WorldView</strong>, a financial-sector platform on Azure with Terraform, CI/CD, Entra ID SSO and audit-ready release workflows; <strong>Starfeed</strong>, a multi-tenant SaaS platform on GCP with Terraform, used across 20+ restaurant locations; <strong>Kleine Koning</strong>, my own time tracking SaaS; and geospatial features for a European traffic analytics platform.
     </p>
     <p>
       In practice that means frontend, backend, databases, authentication, cloud infrastructure, secrets management, monitoring and automated deployments. 
@@ -168,7 +169,7 @@
         <li>Multi-tenant architecture with complete data isolation, role-based access and tenant isolation</li>
         <li>Next.js + TypeScript frontend, Node.js + Express backend; SuperTokens as dedicated auth service on Cloud Run</li>
         <li>Two separate PostgreSQL databases (application + authentication) on Cloud SQL; private VPC only, no public DB access</li>
-        <li>Google Cloud Platform (Cloud Run, Cloud SQL, Cloud Scheduler); Secret Manager for all secrets — none in code or images</li>
+        <li>GCP infrastructure with Terraform: Cloud Run, Cloud SQL, Cloud Scheduler, Secret Manager, private VPC — no secrets in code or images</li>
         <li>CI/CD with GitHub Actions; Docker containerization for all services</li>
         <li>Integrations: WhatsApp Business API (360Dialog), OpenAI, Stripe, Mailgun, Google Places API</li>
         <li>Security: CSRF protection, tiered rate limiting, webhook signature verification; Elasticsearch (single-node, private VM) for search</li>
@@ -187,6 +188,7 @@
         <span>PostgreSQL</span>
         <span>Prisma</span>
         <span>GCP</span>
+        <span>Terraform</span>
         <span>Docker</span>
         <span>SuperTokens</span>
         <span>Elasticsearch</span>
@@ -362,7 +364,7 @@
         <p>
           Automated deployment pipelines, containerization (Docker), CI/CD with GitHub Actions.
           <br><strong>Azure:</strong> App Service, Container Registry (ACR), Azure SQL, Key Vault, Managed Identity, Application Insights, AKS.
-          <br><strong>Google Cloud Platform:</strong> Cloud Run, Cloud SQL, Cloud Scheduler, Secret Manager, Artifact Registry, private VPC networking.
+          <br><strong>Google Cloud Platform:</strong> Terraform, Cloud Run, Cloud SQL, Cloud Scheduler, Secret Manager, Artifact Registry, private VPC networking.
           Environment separation, RBAC, monitoring & alerting, SSL/TLS.
         </p>
       </article>
@@ -427,7 +429,7 @@
   </section>
 
   <!-- 6. PRICING SECTION -->
-  <section class="pricing">
+  <section class="pricing" id="pricing">
     <h2>Pricing</h2>
     <p class="price">
       <strong>Hourly Rates:</strong><br>
@@ -527,7 +529,8 @@
     
     <details>
       <summary>What cloud platforms do you work with?</summary>
-      <p>Azure and Google Cloud Platform, both in production. Azure for WorldView (App Service, SQL, Key Vault, Container Registry), GCP for Starfeed (Cloud Run, Cloud SQL, Cloud Scheduler).</p>
+      <p><strong>Azure:</strong> Terraform, CI/CD with GitHub Actions and OIDC, App Service, Azure SQL, Key Vault, Managed Identity, Container Registry, Application Insights, Entra ID SSO, and AKS where Kubernetes is needed.</p>
+      <p><strong>Google Cloud Platform:</strong> Terraform, Cloud Run, Cloud SQL, Cloud Scheduler, Secret Manager, Artifact Registry, and private VPC networking for multi-service SaaS.</p>
     </details>
     
     <details>
