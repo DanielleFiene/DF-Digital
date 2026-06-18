@@ -1,0 +1,51 @@
+name: Build and Deploy to one.com
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-onecom-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Stage production files
+        run: |
+          rm -rf deploy
+          mkdir -p deploy
+          rsync -a \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude 'docs/' \
+            --exclude 'scripts/' \
+            --exclude 'deploy/' \
+            --exclude 'README.md' \
+            --exclude '.gitattributes' \
+            --exclude '.gitignore' \
+            ./ deploy/
+
+      - name: Deploy to one.com via SFTP
+        if: |
+          (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+          github.event_name == 'workflow_dispatch'
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          server: ${{ secrets.ONE_COM_SSH_HOST }}
+          username: ${{ secrets.ONE_COM_SSH_USER }}
+          password: ${{ secrets.ONE_COM_SSH_PASSWORD }}
+          port: 22
+          local_path: ./deploy/*
+          remote_path: ${{ secrets.ONE_COM_REMOTE_DIR }}
+          sftp_only: true
+          sftpArgs: "-o StrictHostKeyChecking=no -o ConnectTimeout=30"
