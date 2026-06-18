@@ -458,6 +458,12 @@ body.light-theme .hero__subtitle {
   text-align: left;
   margin-bottom: 0.5rem;
   font-size: 1.05rem;
+  width: 100%;
+}
+
+.services__grid .card p {
+  text-align: left;
+  width: 100%;
 }
 
 .services__grid,
