@@ -4,6 +4,7 @@
 :root {
   --content-max: 68rem;
   --prose-max: 42rem;
+  --page-gutter: clamp(1rem, 4vw, 1.5rem);
   --radius-lg: 12px;
   --radius-md: 8px;
   --radius-pill: 999px;
@@ -254,8 +255,22 @@ body.light-theme .nav a.nav__cta:hover {
 /* Main layout */
 .main {
   align-items: stretch;
-  padding: 0 clamp(1rem, 4vw, 1.5rem) 4rem;
+  padding: 0 var(--page-gutter) 4rem;
   text-align: left;
+}
+
+.container {
+  padding-inline: var(--page-gutter);
+}
+
+.services.container {
+  padding-inline: var(--page-gutter);
+  padding-block: 2rem 4rem;
+}
+
+main.container.testimonials {
+  padding-inline: var(--page-gutter);
+  padding-block: 2rem 4rem;
 }
 
 .main > section,
@@ -677,6 +692,14 @@ body.light-theme .intro p {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --page-gutter: clamp(1.35rem, 5.5vw, 2rem);
+  }
+
+  .nav {
+    padding-inline: var(--page-gutter);
+  }
+
   .hero {
     padding-top: 2rem;
   }

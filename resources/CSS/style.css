@@ -1820,7 +1820,7 @@ body.light-theme .testimonials-summary__intro {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto 4rem;
-  padding: 2rem 0;
+  padding-block: 2rem;
 }
 
 .services__grid {
